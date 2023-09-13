@@ -12,7 +12,12 @@
         <td><%= category.name %></td>
         <td><%= link_to 'Show', category %></td>
         <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+  <%= form_with(model: category, method: :delete, data: { confirm: 'Are you sure?' }, local: false) do |form| %>
+    <%= form.submit 'Destroy', class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %>
+  <% end %>
+</td>
+
       </tr>
     <% end %>
   </tbody>

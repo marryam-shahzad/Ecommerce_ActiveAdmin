@@ -54,6 +54,6 @@ class RetailerProductsController < ApplicationController
   end
 
   def retailer_product_params
-    params.require(:retailer_product).permit(:product_id, :retailer_id, :price, :stock_quantity)
+    params.require(:retailer_product).permit(:product_master_id, :retailer_id, :price, :stock_quantity)
   end
 end

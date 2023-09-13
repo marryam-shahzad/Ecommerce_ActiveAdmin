@@ -18,7 +18,12 @@
         <td><%= retailer_product.stock_quantity %></td>
         <td><%= link_to 'Show', retailer_product %></td>
         <td><%= link_to 'Edit', edit_retailer_product_path(retailer_product) %></td>
-        <td><%= link_to 'Destroy', retailer_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+  <%= form_with(model: retailer_product, method: :delete, data: { confirm: 'Are you sure?' }, local: false) do |form| %>
+    <%= form.submit 'Destroy', class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %>
+  <% end %>
+</td>
+
       </tr>
     <% end %>
   </tbody>
