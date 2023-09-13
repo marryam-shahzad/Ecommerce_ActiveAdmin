@@ -1,0 +1,7 @@
+<h1>Retailer Product</h1>
+<p><strong>Product:</strong> <%= @retailer_product.product_master.name %></p>
+<p><strong>Retailer:</strong> <%= @retailer_product.retailer.name %></p>
+<p><strong>Price:</strong> <%= @retailer_product.price %></p>
+<p><strong>Stock Quantity:</strong> <%= @retailer_product.stock_quantity %></p>
+<p><%= link_to 'Edit', edit_retailer_product_path(@retailer_product) %> |
+   <%= link_to 'Back', retailer_products_path %></p>
