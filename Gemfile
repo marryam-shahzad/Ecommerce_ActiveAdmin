@@ -54,6 +54,9 @@ group :development, :test do
     # Add new gems for development and testing here
   gem "devise" # Add this line for devise
   gem "activeadmin" # Add this line for activeadmin
+  gem 'sidekiq'
+  gem "faker"
+  gem "csv"
 
 end
 
