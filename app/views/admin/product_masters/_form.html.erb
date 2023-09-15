@@ -1,0 +1,9 @@
+<!-- app/views/admin/product_masters/_form.html.erb -->
+
+<%= form_tag import_admin_product_masters_path, method: :post, multipart: true do %>
+  <div class="field">
+    <%= label_tag 'Select CSV file' %>
+    <%= file_field_tag :csv_file %>
+  </div>
+  <%= submit_tag 'Import CSV', class: 'button' %>
+<% end %>

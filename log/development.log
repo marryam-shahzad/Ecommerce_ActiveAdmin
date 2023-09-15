@@ -13374,3 +13374,688 @@ Processing by Admin::BrandsController#index as HTML
 Completed 200 OK in 53ms (Views: 47.5ms | ActiveRecord: 1.2ms | Allocations: 73228)
 
 
+Started GET "/admin/product_masters" for ::1 at 2023-09-15 11:27:45 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::ProductMastersController#index as HTML
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb (Duration: 96.0ms | Allocations: 82264)
+Completed 500 Internal Server Error in 143ms (ActiveRecord: 28.3ms | Allocations: 110968)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_admin_product_master_csv_import_path' for           <div class="action_items">
+            <span class="action_item"><a href="/admin/product_masters/new">New Product Master</a></span>
+          </div>
+:ActiveAdmin::Views::ActionItems):
+    1: # frozen_string_literal: true
+    2: insert_tag renderer_for(:index)
+  
+app/admin/product_masters.rb:30:in `block (2 levels) in <main>'
+Started GET "/admin/csv_import" for ::1 at 2023-09-15 11:27:47 +0500
+Processing by Admin::CsvImportController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb
+  Rendered admin/csv_import/_form.html.erb (Duration: 0.6ms | Allocations: 603)
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb (Duration: 10.4ms | Allocations: 17115)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.4ms | Allocations: 19261)
+
+
+Started GET "/admin/csv_import" for ::1 at 2023-09-15 11:27:48 +0500
+Processing by Admin::CsvImportController#index as HTML
+  [1m[36mAdminUser Load (0.7ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb
+  Rendered admin/csv_import/_form.html.erb (Duration: 0.3ms | Allocations: 323)
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb (Duration: 17.9ms | Allocations: 15682)
+Completed 200 OK in 23ms (Views: 18.4ms | ActiveRecord: 0.7ms | Allocations: 17216)
+
+
+Started GET "/admin/product_masters" for ::1 at 2023-09-15 11:27:50 +0500
+Processing by Admin::ProductMastersController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb (Duration: 14.7ms | Allocations: 17215)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms | Allocations: 19010)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_admin_product_master_csv_import_path' for           <div class="action_items">
+            <span class="action_item"><a href="/admin/product_masters/new">New Product Master</a></span>
+          </div>
+:ActiveAdmin::Views::ActionItems):
+    1: # frozen_string_literal: true
+    2: insert_tag renderer_for(:index)
+  
+app/admin/product_masters.rb:30:in `block (2 levels) in <main>'
+Started GET "/admin/product_masters" for ::1 at 2023-09-15 11:28:01 +0500
+Processing by Admin::ProductMastersController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb (Duration: 11.7ms | Allocations: 18210)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 10.8ms | Allocations: 27925)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_product_master_csv_import_path' for           <div class="action_items">
+            <span class="action_item"><a href="/admin/product_masters/new">New Product Master</a></span>
+          </div>
+:ActiveAdmin::Views::ActionItems):
+    1: # frozen_string_literal: true
+    2: insert_tag renderer_for(:index)
+  
+app/admin/product_masters.rb:30:in `block (2 levels) in <main>'
+Started GET "/admin/product_masters" for ::1 at 2023-09-15 11:28:01 +0500
+Processing by Admin::ProductMastersController#index as HTML
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb (Duration: 22.3ms | Allocations: 17361)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.5ms | Allocations: 19159)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_product_master_csv_import_path' for           <div class="action_items">
+            <span class="action_item"><a href="/admin/product_masters/new">New Product Master</a></span>
+          </div>
+:ActiveAdmin::Views::ActionItems):
+    1: # frozen_string_literal: true
+    2: insert_tag renderer_for(:index)
+  
+app/admin/product_masters.rb:30:in `block (2 levels) in <main>'
+Started GET "/admin/product_masters" for ::1 at 2023-09-15 11:28:14 +0500
+Processing by Admin::ProductMastersController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb (Duration: 12.0ms | Allocations: 18209)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 10.5ms | Allocations: 27907)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_product_masters_csv_import_path' for           <div class="action_items">
+            <span class="action_item"><a href="/admin/product_masters/new">New Product Master</a></span>
+          </div>
+:ActiveAdmin::Views::ActionItems):
+    1: # frozen_string_literal: true
+    2: insert_tag renderer_for(:index)
+  
+app/admin/product_masters.rb:30:in `block (2 levels) in <main>'
+Started GET "/admin/product_masters" for ::1 at 2023-09-15 11:28:15 +0500
+Processing by Admin::ProductMastersController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb (Duration: 22.5ms | Allocations: 17360)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.4ms | Allocations: 19155)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_product_masters_csv_import_path' for           <div class="action_items">
+            <span class="action_item"><a href="/admin/product_masters/new">New Product Master</a></span>
+          </div>
+:ActiveAdmin::Views::ActionItems):
+    1: # frozen_string_literal: true
+    2: insert_tag renderer_for(:index)
+  
+app/admin/product_masters.rb:30:in `block (2 levels) in <main>'
+Started GET "/admin/product_masters" for ::1 at 2023-09-15 11:28:47 +0500
+Processing by Admin::ProductMastersController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb
+  [1m[36mProductMaster Load (1.2ms)[0m  [1m[34mSELECT "product_masters".* FROM "product_masters" ORDER BY "product_masters"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/admin/product_masters.rb:12:in `block (2 levels) in <main>'
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/admin/product_masters.rb:12:in `block (2 levels) in <main>'
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/admin/product_masters.rb:12:in `block (2 levels) in <main>'
+  [1m[36mBrand Load (2.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb (Duration: 81.0ms | Allocations: 133563)
+Completed 200 OK in 102ms (Views: 63.3ms | ActiveRecord: 28.9ms | Allocations: 143290)
+
+
+Started GET "/admin/brands" for ::1 at 2023-09-15 11:28:50 +0500
+Processing by Admin::BrandsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb
+  [1m[36mBrand Load (1.8ms)[0m  [1m[34mSELECT "brands".* FROM "brands" ORDER BY "brands"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBrand Count (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "brands"[0m
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb (Duration: 74.8ms | Allocations: 73127)
+Completed 200 OK in 82ms (Views: 72.7ms | ActiveRecord: 4.2ms | Allocations: 75970)
+
+
+Started GET "/admin/csv_import" for ::1 at 2023-09-15 11:28:51 +0500
+Processing by Admin::CsvImportController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb
+  Rendered admin/csv_import/_form.html.erb (Duration: 0.4ms | Allocations: 348)
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb (Duration: 17.7ms | Allocations: 15973)
+Completed 200 OK in 24ms (Views: 20.3ms | ActiveRecord: 0.4ms | Allocations: 17924)
+
+
+Started GET "/admin/brands" for ::1 at 2023-09-15 11:28:51 +0500
+Processing by Admin::BrandsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT "brands".* FROM "brands" ORDER BY "brands"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBrand Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "brands"[0m
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb (Duration: 28.5ms | Allocations: 71287)
+Completed 200 OK in 32ms (Views: 27.3ms | ActiveRecord: 1.8ms | Allocations: 73101)
+
+
+Started GET "/admin/product_masters" for ::1 at 2023-09-15 11:43:58 +0500
+  
+NameError (uninitialized constant V1):
+  
+config/routes.rb:21:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/admin/products" for ::1 at 2023-09-15 11:43:59 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/admin/products"):
+  
+Started GET "/admin/" for ::1 at 2023-09-15 11:43:59 +0500
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (5.4ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb
+Started GET "/admin" for ::1 at 2023-09-15 11:43:59 +0500
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb (Duration: 14.5ms | Allocations: 16881)
+Completed 200 OK in 72ms (Views: 15.9ms | ActiveRecord: 27.8ms | Allocations: 27820)
+
+
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb (Duration: 7.0ms | Allocations: 15433)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.3ms | Allocations: 16977)
+
+
+Started GET "/admin" for ::1 at 2023-09-15 11:44:00 +0500
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb (Duration: 11.1ms | Allocations: 15433)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.2ms | Allocations: 16969)
+
+
+Started GET "/account" for ::1 at 2023-09-15 11:44:00 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/account"):
+  
+Started GET "/" for ::1 at 2023-09-15 11:44:00 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for ::1 at 2023-09-15 11:44:05 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for ::1 at 2023-09-15 11:45:08 +0500
+  
+NameError (uninitialized constant V1):
+  
+config/routes.rb:21:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2023-09-15 11:45:10 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for ::1 at 2023-09-15 11:45:12 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for ::1 at 2023-09-15 11:45:23 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for ::1 at 2023-09-15 11:45:24 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for ::1 at 2023-09-15 11:45:25 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for ::1 at 2023-09-15 11:45:25 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for ::1 at 2023-09-15 11:45:25 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for ::1 at 2023-09-15 11:45:41 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/account" for ::1 at 2023-09-15 11:45:42 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/account"):
+  
+Started GET "/api/v1" for ::1 at 2023-09-15 11:45:44 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1"):
+  
+Started GET "/rails/info/routes?path=api" for ::1 at 2023-09-15 11:45:48 +0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"api"}
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 4550)
+
+
+Started GET "/rails/info/routes?path=api/" for ::1 at 2023-09-15 11:45:49 +0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"api/"}
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1483)
+
+
+Started GET "/rails/info/routes?path=api/v1" for ::1 at 2023-09-15 11:45:50 +0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"api/v1"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1483)
+
+
+Started GET "/rails/info/routes?path=api/v1" for ::1 at 2023-09-15 11:45:55 +0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"api/v1"}
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1480)
+
+
+Started GET "/rails/info/routes?path=/api/v1" for ::1 at 2023-09-15 11:45:56 +0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/api/v1"}
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1483)
+
+
+Started GET "/rails/info/routes?path=/api/v1" for ::1 at 2023-09-15 11:45:57 +0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/api/v1"}
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1480)
+
+
+Started GET "/account" for ::1 at 2023-09-15 11:46:15 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/account"):
+  
+Started GET "/" for ::1 at 2023-09-15 11:46:15 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/product_masters" for ::1 at 2023-09-15 11:46:18 +0500
+Processing by ProductMastersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_masters/index.html.erb within layouts/application
+  [1m[36mProductMaster Load (2.6ms)[0m  [1m[34mSELECT "product_masters".* FROM "product_masters"[0m
+  ↳ app/views/product_masters/index.html.erb:13
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/product_masters/index.html.erb:18
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/product_masters/index.html.erb:18
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/product_masters/index.html.erb:18
+  Rendered product_masters/index.html.erb within layouts/application (Duration: 43.3ms | Allocations: 10841)
+  Rendered layout layouts/application.html.erb (Duration: 70.4ms | Allocations: 31978)
+Completed 200 OK in 77ms (Views: 43.4ms | ActiveRecord: 28.4ms | Allocations: 38302)
+
+
+Started GET "/product_masters" for ::1 at 2023-09-15 11:46:19 +0500
+Processing by ProductMastersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_masters/index.html.erb within layouts/application
+  [1m[36mProductMaster Load (0.3ms)[0m  [1m[34mSELECT "product_masters".* FROM "product_masters"[0m
+  ↳ app/views/product_masters/index.html.erb:13
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/product_masters/index.html.erb:18
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/product_masters/index.html.erb:18
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/product_masters/index.html.erb:18
+  Rendered product_masters/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3998)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 8456)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.8ms | Allocations: 8790)
+
+
+Started GET "/product_masters" for ::1 at 2023-09-15 11:46:40 +0500
+  
+NameError (uninitialized constant V1):
+  
+config/routes.rb:21:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/product_masters" for ::1 at 2023-09-15 11:46:41 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/product_masters"):
+  
+Started GET "/rails/info/routes?path=api" for ::1 at 2023-09-15 11:46:53 +0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"api"}
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 4152)
+
+
+Started GET "/rails/info/routes?path=api/" for ::1 at 2023-09-15 11:46:53 +0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"api/"}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1420)
+
+
+Started GET "/rails/info/routes?path=/" for ::1 at 2023-09-15 11:46:57 +0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/"}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 3539)
+
+
+Started GET "/rails/info/routes?path=/api" for ::1 at 2023-09-15 11:46:57 +0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/api"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1420)
+
+
+Started GET "/rails/info/routes?path=/ap" for ::1 at 2023-09-15 11:46:59 +0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/ap"}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1420)
+
+
+Started GET "/rails/info/routes?path=/a" for ::1 at 2023-09-15 11:47:00 +0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/a"}
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 2870)
+
+
+Started GET "/rails/info/routes?path=/" for ::1 at 2023-09-15 11:47:03 +0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/"}
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 3539)
+
+
+Started GET "/rails/info/routes?path=/pro" for ::1 at 2023-09-15 11:47:04 +0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/pro"}
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 1874)
+
+
+Started GET "/rails/info/routes?path=/product" for ::1 at 2023-09-15 11:47:05 +0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/product"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1857)
+
+
+Started GET "/rails/info/routes?path=/product_mas" for ::1 at 2023-09-15 11:47:09 +0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/product_mas"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1578)
+
+
+Started GET "/rails/info/routes?path=/product_masters" for ::1 at 2023-09-15 11:47:11 +0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/product_masters"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1578)
+
+
+Started GET "/product_masters" for ::1 at 2023-09-15 11:47:31 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/product_masters"):
+  
+Started GET "/" for ::1 at 2023-09-15 11:47:34 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/account" for ::1 at 2023-09-15 11:47:34 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/account"):
+  
+Started GET "/api/v1/product_masters" for ::1 at 2023-09-15 11:47:47 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/product_masters"):
+  
+Started GET "/api/v1/product_masters" for ::1 at 2023-09-15 11:48:04 +0500
+  
+NameError (uninitialized constant V1):
+  
+config/routes.rb:21:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/api/v1/product_masters" for ::1 at 2023-09-15 11:48:04 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/product_masters"):
+  
+Started GET "/api/v1/product_masters" for ::1 at 2023-09-15 11:48:05 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/product_masters"):
+  
+Started GET "/api/v1/product_masters" for ::1 at 2023-09-15 11:48:05 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/product_masters"):
+  
+Started GET "/api/v1/product_masters" for ::1 at 2023-09-15 11:48:32 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/product_masters"):
+  
+Started GET "/api/v1/product_masters" for ::1 at 2023-09-15 11:48:33 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/product_masters"):
+  
+Started GET "/api/v1/product_masters" for ::1 at 2023-09-15 11:48:33 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/product_masters"):
+  
+Started GET "/api/v1/product_masters" for ::1 at 2023-09-15 11:48:33 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/product_masters"):
+  
+Started GET "/api/v1/product_masters" for ::1 at 2023-09-15 11:48:33 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/product_masters"):
+  
+Started GET "/api/v1/product_masters" for ::1 at 2023-09-15 11:48:48 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NameError (uninitialized constant V1::API::ProductMasters):
+  
+app/api/v1.rb:8:in `block (2 levels) in <class:API>'
+Started GET "/api/v1/product_masters" for ::1 at 2023-09-15 11:49:01 +0500
+  [1m[36mProductMaster Load (1.3ms)[0m  [1m[34mSELECT "product_masters".* FROM "product_masters"[0m
+Started GET "/api/v1/product_masters/1" for ::1 at 2023-09-15 11:49:54 +0500
+  
+NameError (uninitialized constant V1::API::ProductMasters):
+  
+app/api/v1.rb:17:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/product_masters/1" for ::1 at 2023-09-15 11:50:00 +0500
+  [1m[36mProductMaster Load (0.7ms)[0m  [1m[34mSELECT "product_masters".* FROM "product_masters" WHERE "product_masters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:17:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/product_masters/1" for ::1 at 2023-09-15 11:58:36 +0500
+  [1m[36mProductMaster Load (0.9ms)[0m  [1m[34mSELECT "product_masters".* FROM "product_masters" WHERE "product_masters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:17:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/brands" for ::1 at 2023-09-15 11:58:40 +0500
+  [1m[36mBrand Load (4.4ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+Started GET "/api/v1/brands/100" for ::1 at 2023-09-15 11:58:54 +0500
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 100], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:36:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/brands/100" for ::1 at 2023-09-15 11:59:48 +0500
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 100], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:36:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/brands" for ::1 at 2023-09-15 11:59:48 +0500
+  [1m[36mBrand Load (3.5ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+Started GET "/api/v1/category" for ::1 at 2023-09-15 11:59:51 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/category"):
+  
+Started GET "/api/v1/categories" for ::1 at 2023-09-15 11:59:54 +0500
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Started GET "/api/v1/categories/1" for ::1 at 2023-09-15 12:00:01 +0500
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:53:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/categories/1" for ::1 at 2023-09-15 12:00:24 +0500
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:53:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/categories/1" for ::1 at 2023-09-15 12:00:26 +0500
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:53:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/categories" for ::1 at 2023-09-15 12:00:26 +0500
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Started GET "/api/v1/retailers" for ::1 at 2023-09-15 12:00:29 +0500
+  [1m[36mRetailer Load (1.9ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+Started GET "/api/v1/retailers/3" for ::1 at 2023-09-15 12:00:33 +0500
+  [1m[36mRetailer Load (0.4ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers" WHERE "retailers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:71:in `block (3 levels) in <class:API>'
+  
+ActiveRecord::RecordNotFound (Couldn't find Retailer with 'id'=3):
+  
+app/api/v1.rb:71:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/retailers" for ::1 at 2023-09-15 12:03:17 +0500
+  [1m[36mRetailer Load (0.5ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+Started GET "/api/v1/retailers" for ::1 at 2023-09-15 12:03:19 +0500
+  [1m[36mRetailer Load (0.3ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+Started GET "/api/v1/product_masters" for ::1 at 2023-09-15 12:03:23 +0500
+  [1m[36mProductMaster Load (0.4ms)[0m  [1m[34mSELECT "product_masters".* FROM "product_masters"[0m
+Started GET "/api/v1/product_masters/1" for ::1 at 2023-09-15 12:03:26 +0500
+  [1m[36mProductMaster Load (0.3ms)[0m  [1m[34mSELECT "product_masters".* FROM "product_masters" WHERE "product_masters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:17:in `block (3 levels) in <class:API>'
+  
+NameError (undefined local variable or method `product' for #<#<Class:0x000000014b698948>:0x000000014a8a49e0 @inheritable_setting=#<Grape::Util::InheritableSetting:0x000000014b698650 @route={:description=>{:description=>"Get a specific product"}, :declared_params=>[#<Grape::Validations::ParamsScope::Attr:0x000000014b6998e8 @key=:id, @scope=#<Grape::Validations::ParamsScope:0x000000014b69a1a8 @element=nil, @element_renamed=nil, @parent=nil, @api=#<Class:0x000000014b6b1038>, @optional=false, @type=Hash, @group=nil, @dependent_on=nil, @declared_params=nil, @index=nil>>], :saved_validations=>[{:attributes=>[:id], :options=>{:value=>true, :message=>nil}, :required=>true, :params_scope=>#<Grape::Validations::ParamsScope:0x000000014b69a1a8 @element=nil, @element_renamed=nil, @parent=nil, @api=#<Class:0x000000014b6b1038>, @optional=false, @type=Hash, @group=nil, @dependent_on=nil, @declared_params=nil, @index=nil>, :opts=>{:allow_blank=>nil, :fail_fast=>false}, :validator_class=>Grape::Validations::Validators::PresenceValidator}, {:attributes=>[:id], :options=>{:type=>Integer, :method=>nil, :message=>nil}, :required=>true, :params_scope=>#<Grape::Validations::ParamsScope:0x000000014b69a1a8 @element=nil, @element_renamed=nil, @parent=nil, @api=#<Class:0x000000014b6b1038>, @optional=false, @type=Hash, @group=nil, @dependent_on=nil, @declared_params=nil, @index=nil>, :opts=>{:allow_blank=>nil, :fail_fast=>false}, :validator_class=>Grape::Validations::Validators::CoerceValidator}]}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b698380 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b698218 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6a0ad0 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @new_values={}>, @new_values={:default_error_status=>500}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6981c8 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6a0a08 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @new_values={:namespace=>[#<Grape::Namespace:0x000000014b6a0198 @space="product_masters", @options={}>]}>, @new_values={:namespace=>[#<Grape::Namespace:0x000000014b698fb0 @space=":id", @options={}>]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b698178 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6a0990 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @new_values={}>, @new_values={}>, @point_in_time_copies=[], @parent=#<Grape::Util::InheritableSetting:0x000000014b6a0cb0 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6a0b48 @inherited_values={}, @new_values={:description=>{:description=>"Get a specific product"}}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6a0ad0 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @new_values={}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6a0a08 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @new_values={:namespace=>[#<Grape::Namespace:0x000000014b6a0198 @space="product_masters", @options={}>]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6a0990 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @new_values={}>, @point_in_time_copies=[#<Grape::Util::InheritableSetting:0x000000014b69b6e8 @route={:description=>{:description=>"Get a list of products"}, :declared_params=>[], :saved_validations=>[]}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b69b198 @inherited_values={}, @new_values={:description=>{:description=>"Get a list of products"}}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b69b120 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @new_values={:default_error_status=>500}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b69b0d0 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @new_values={:namespace=>[#<Grape::Namespace:0x000000014b6a0198 @space="product_masters", @options={}>]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b69af68 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @new_values={}>, @point_in_time_copies=[], @parent=#<Grape::Util::InheritableSetting:0x000000014b6b0bb0 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6b0ac0 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @point_in_time_copies=[], @parent=#<Grape::Util::InheritableSetting:0x000000014b6b04a8 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6b03e0 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @point_in_time_copies=[], @parent=nil>>>], @parent=#<Grape::Util::InheritableSetting:0x000000014b6b0bb0 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6b0ac0 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @point_in_time_copies=[], @parent=#<Grape::Util::InheritableSetting:0x000000014b6b04a8 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6b03e0 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @point_in_time_copies=[], @parent=nil>>>>, @options={:method=>["GET"], :path=>["/"], :for=>#<Class:0x000000014b6b1038>, :route_options=>{:params=>{"id"=>{:required=>true, :type=>"Integer"}}, :description=>"Get a specific product"}, :options_route_enabled=>true}, @lazy_initialize_lock=#<Thread::Mutex:0x000000014b693a88>, @lazy_initialized=true, @block=#<Proc:0x000000014b692de0 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/grape-1.8.0/lib/grape/endpoint.rb:56>, @status=nil, @stream=nil, @body=nil, @proc=nil, @source=#<Proc:0x000000014b698e20 /Users/marryamshahzad/Documents/rails_project/Ecommerce_ActiveAdmin/app/api/v1.rb:16>, @namespace="/product_masters/:id", @routes=[#<Grape::Router::Route:0x000000014b49bd48 @options={:params=>{"id"=>{:required=>true, :type=>"Integer"}}, :description=>"Get a specific product", :namespace=>"/product_masters/:id", :version=>nil, :requirements=>{}, :prefix=>nil, :anchor=>true, :settings=>{:description=>{:description=>"Get a specific product"}}, :forward_match=>nil, :suffix=>"(.json)", :method=>"GET"}, @pattern=#<Grape::Router::Pattern:0x000000014b49bb90 @origin="/product_masters/:id", @path="/product_masters/:id(.json)", @pattern=#<Mustermann::Grape:"/product_masters/:id(.json)">, @to_regexp=/\A(?-mix:\/(?:p|%70)(?:r|%72)(?:o|%6f|%6F)(?:d|%64)(?:u|%75)(?:c|%63)(?:t|%74)(?:_|%5f|%5F)(?:m|%6d|%6D)(?:a|%61)(?:s|%73)(?:t|%74)(?:e|%65)(?:r|%72)(?:s|%73)\/(?<id>(?:(?!(?:\.|%2e|%2E)(?:j|%6a|%6A)(?:s|%73)(?:o|%6f|%6F)(?:n|%6e|%6E)$)[^\/\?#.])+)(?:(?:\.|%2e|%2E)(?:j|%6a|%6A)(?:s|%73)(?:o|%6f|%6F)(?:n|%6e|%6E))?)\Z/>, @translator=#<Grape::Router::AttributeTranslator:0x000000014b49b500 @attributes={:params=>{"id"=>{:required=>true, :type=>"Integer"}}, :description=>"Get a specific product", :namespace=>"/product_masters/:id", :version=>nil, :requirements=>{}, :prefix=>nil, :anchor=>true, :settings=>{:description=>{:description=>"Get a specific product"}}, :forward_match=>nil, :suffix=>"(.json)", :request_method=>"GET"}>, @app=#<#<Class:0x000000014b698948>:0x000000014b6986f0 @inheritable_setting=#<Grape::Util::InheritableSetting:0x000000014b698650 @route={:description=>{:description=>"Get a specific product"}, :declared_params=>[#<Grape::Validations::ParamsScope::Attr:0x000000014b6998e8 @key=:id, @scope=#<Grape::Validations::ParamsScope:0x000000014b69a1a8 @element=nil, @element_renamed=nil, @parent=nil, @api=#<Class:0x000000014b6b1038>, @optional=false, @type=Hash, @group=nil, @dependent_on=nil, @declared_params=nil, @index=nil>>], :saved_validations=>[{:attributes=>[:id], :options=>{:value=>true, :message=>nil}, :required=>true, :params_scope=>#<Grape::Validations::ParamsScope:0x000000014b69a1a8 @element=nil, @element_renamed=nil, @parent=nil, @api=#<Class:0x000000014b6b1038>, @optional=false, @type=Hash, @group=nil, @dependent_on=nil, @declared_params=nil, @index=nil>, :opts=>{:allow_blank=>nil, :fail_fast=>false}, :validator_class=>Grape::Validations::Validators::PresenceValidator}, {:attributes=>[:id], :options=>{:type=>Integer, :method=>nil, :message=>nil}, :required=>true, :params_scope=>#<Grape::Validations::ParamsScope:0x000000014b69a1a8 @element=nil, @element_renamed=nil, @parent=nil, @api=#<Class:0x000000014b6b1038>, @optional=false, @type=Hash, @group=nil, @dependent_on=nil, @declared_params=nil, @index=nil>, :opts=>{:allow_blank=>nil, :fail_fast=>false}, :validator_class=>Grape::Validations::Validators::CoerceValidator}]}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b698380 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b698218 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6a0ad0 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @new_values={}>, @new_values={:default_error_status=>500}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6981c8 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6a0a08 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @new_values={:namespace=>[#<Grape::Namespace:0x000000014b6a0198 @space="product_masters", @options={}>]}>, @new_values={:namespace=>[#<Grape::Namespace:0x000000014b698fb0 @space=":id", @options={}>]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b698178 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6a0990 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @new_values={}>, @new_values={}>, @point_in_time_copies=[], @parent=#<Grape::Util::InheritableSetting:0x000000014b6a0cb0 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6a0b48 @inherited_values={}, @new_values={:description=>{:description=>"Get a specific product"}}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6a0ad0 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @new_values={}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6a0a08 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @new_values={:namespace=>[#<Grape::Namespace:0x000000014b6a0198 @space="product_masters", @options={}>]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6a0990 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @new_values={}>, @point_in_time_copies=[#<Grape::Util::InheritableSetting:0x000000014b69b6e8 @route={:description=>{:description=>"Get a list of products"}, :declared_params=>[], :saved_validations=>[]}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b69b198 @inherited_values={}, @new_values={:description=>{:description=>"Get a list of products"}}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b69b120 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @new_values={:default_error_status=>500}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b69b0d0 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @new_values={:namespace=>[#<Grape::Namespace:0x000000014b6a0198 @space="product_masters", @options={}>]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b69af68 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @new_values={}>, @point_in_time_copies=[], @parent=#<Grape::Util::InheritableSetting:0x000000014b6b0bb0 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6b0ac0 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @point_in_time_copies=[], @parent=#<Grape::Util::InheritableSetting:0x000000014b6b04a8 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6b03e0 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @point_in_time_copies=[], @parent=nil>>>], @parent=#<Grape::Util::InheritableSetting:0x000000014b6b0bb0 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6b0ac0 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @point_in_time_copies=[], @parent=#<Grape::Util::InheritableSetting:0x000000014b6b04a8 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6b03e0 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @point_in_time_copies=[], @parent=nil>>>>, @options={:method=>["GET"], :path=>["/"], :for=>#<Class:0x000000014b6b1038>, :route_options=>{:params=>{"id"=>{:required=>true, :type=>"Integer"}}, :description=>"Get a specific product"}, :options_route_enabled=>true}, @lazy_initialize_lock=#<Thread::Mutex:0x000000014b693a88>, @lazy_initialized=true, @block=#<Proc:0x000000014b692de0 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/grape-1.8.0/lib/grape/endpoint.rb:56>, @status=nil, @stream=nil, @body=nil, @proc=nil, @source=#<Proc:0x000000014b698e20 /Users/marryamshahzad/Documents/rails_project/Ecommerce_ActiveAdmin/app/api/v1.rb:16>, @namespace="/product_masters/:id", @routes=[...], @helpers=#<Module:0x000000014a8a59d0>, @app=#<Rack::Head:0x000000014a8a4a30 @app=#<#<Class:0x000000014a8a5818>:0x000000014a8a4cb0 @app=#<Grape::Middleware::Formatter:0x000000014a8a4df0 @app=#<Proc:0x000000014a8a4eb8 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/grape-1.8.0/lib/grape/endpoint.rb:316 (lambda)>, @options={:default_format=>:txt, :formatters=>nil, :parsers=>nil, :format=>:json, :content_types=>{:json=>"application/json"}}, @app_response=nil>, @options={:default_status=>500, :default_message=>"", :format=>:json, :helpers=>#<Module:0x000000014a8a59d0>, :formatters=>{}, :error_formatters=>nil, :rescue_all=>nil, :rescue_grape_exceptions=>nil, :rescue_subclasses=>true, :rescue_options=>{}, :rescue_handlers=>{}, :base_only_rescue_handlers=>{}, :all_rescue_handler=>nil, :content_types=>{:json=>"application/json"}, :default_error_formatter=>Grape::ErrorFormatter::Json, :grape_exceptions_rescue_handler=>nil}, @app_response=nil>>>, @index=1>], @helpers=#<Module:0x000000014a8a59d0>, @app=#<Rack::Head:0x000000014a8a4a30 @app=#<#<Class:0x000000014a8a5818>:0x000000014a8a4cb0 @app=#<Grape::Middleware::Formatter:0x000000014a8a4df0 @app=#<Proc:0x000000014a8a4eb8 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/grape-1.8.0/lib/grape/endpoint.rb:316 (lambda)>, @options={:default_format=>:txt, :formatters=>nil, :parsers=>nil, :format=>:json, :content_types=>{:json=>"application/json"}}, @app_response=nil>, @options={:default_status=>500, :default_message=>"", :format=>:json, :helpers=>#<Module:0x000000014a8a59d0>, :formatters=>{}, :error_formatters=>nil, :rescue_all=>nil, :rescue_grape_exceptions=>nil, :rescue_subclasses=>true, :rescue_options=>{}, :rescue_handlers=>{}, :base_only_rescue_handlers=>{}, :all_rescue_handler=>nil, :content_types=>{:json=>"application/json"}, :default_error_formatter=>Grape::ErrorFormatter::Json, :grape_exceptions_rescue_handler=>nil}, @app_response=nil>>, @env={"rack.version"=>[1, 6], "rack.errors"=>#<IO:<STDERR>>, "rack.multithread"=>true, "rack.multiprocess"=>false, "rack.run_once"=>false, "rack.url_scheme"=>"http", "SCRIPT_NAME"=>"/api/v1", "QUERY_STRING"=>"", "SERVER_PROTOCOL"=>"HTTP/1.1", "SERVER_SOFTWARE"=>"puma 5.6.7 Birdie's Version", "GATEWAY_INTERFACE"=>"CGI/1.2", "REQUEST_METHOD"=>"GET", "REQUEST_PATH"=>"/api/v1/product_masters/1", "REQUEST_URI"=>"/api/v1/product_masters/1", "HTTP_VERSION"=>"HTTP/1.1", "HTTP_HOST"=>"localhost:3000", "HTTP_SEC_FETCH_SITE"=>"none", "HTTP_IF_NONE_MATCH"=>"W/\"d4bcbd22e99fb39e4d869be2b2c7c563\"", "HTTP_ACCEPT_LANGUAGE"=>"en-GB,en;q=0.9", "HTTP_SEC_FETCH_MODE"=>"navigate", "HTTP_ACCEPT_ENCODING"=>"gzip, deflate", "HTTP_ACCEPT"=>"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "HTTP_USER_AGENT"=>"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15", "HTTP_CONNECTION"=>"keep-alive", "HTTP_UPGRADE_INSECURE_REQUESTS"=>"1", "HTTP_COOKIE"=>"_ecommerce_app_session=3Wwpa0n%2Fx4G%2BDWbmZPOCFVI48%2Fnx6U%2Fe9Uly7TjxUz85cewPEJ55eHoyaI86gbRtILr9ZMFN61fiEVz8uNo61S8S4njeQaBUqdySGpffOiLZ%2Fg%2BEcP5DFAmKd3WpGxjGPbf0EB2h27vFKy92T9rycXFIIw33XDWiw36DhDdC6839JG64kIIZzittNKs5cYVKUf%2FcwjFBAVbrFrzV%2FbyiYrX8f%2F2LiRsUyBX2Fn0XivyIu28hWKnPNnVkYlmlOuBMLcCKfMTRSe1C2p%2BGznM9xxoXUIP6jZssXDSqRzBNWldZmEasLax11bT%2FYwFaquerxHDsAx2rrnLGx7ucassjxFW9Ssrdkt%2BOjOo5tEkUjwQYNxNhFEUzUib%2BN4Izx41Ha3UbJhFrSVn139wVCCSKyUHaqe%2FUqg%3D%3D--qFNW9ORGiNcEsqkb--qjktsUfL18uEji6qwtrxKQ%3D%3D; _shopshop_postgresql_session=%2BDQw0T12JHSX1hn2sdHdS4OZHFMxxQBnwLtypO5jan5cFGNgRTo1qXAzQt6wjwJqYVuVwlzKvT5Lp8iIDoiB0f3gtg9IjgqVHP3WfrLUJNqPRaJzU8x11YsbzbJAOI063zRBpeuWorT6fr1ouiAMe1BPhDEik3A8YYTQHeLVYf%2FrNcGNmpDbtCZy7GVdOvqqcCacGtcu5C71qXQu7dbL%2Feicr5uEME5UjsAQUrXYJoz4IAhhSsYAl9pFVZZzzuMCfO2ic6xXTqBGk2MNsq4vVx6g4lbWo8woO4nrFITkRDXYfpxaFCSe7qlVlr851V0UOdxoX%2B4dVJ4qjECAum72G40rO4GKGF6MEXuwlw%2Fbf4NyCDTiCsBzH8pC0K5HTyYJNaRGy%2BUqPFGidobFelyQYpPhWA1GMzwo0R9ZpLTxRDzkSWTx--LyRZ8LpmNM6z64HD--8ZiSVqbvBo9XG%2BUJZ2oKSw%3D%3D; guest_token=eyJfcmFpbHMiOnsibWVzc2FnZSI6IklqTlRObkl6WDE5Q1pXcHJRbGM1WldWcVNsVnpRbEVpIiwiZXhwIjpudWxsLCJwdXIiOiJjb29raWUuZ3Vlc3RfdG9rZW4ifX0%3D--fbc7e60bea46160e1ee84c321e1bfa2effe6a5b8", "HTTP_SEC_FETCH_DEST"=>"document", "puma.request_body_wait"=>0, "SERVER_NAME"=>"localhost", "SERVER_PORT"=>"3000", "PATH_INFO"=>"/product_masters/1", "REMOTE_ADDR"=>"::1", "puma.socket"=>#<TCPSocket:fd 18, AF_INET6, ::1, 3000>, "rack.hijack?"=>true, "rack.hijack"=>#<Puma::Client:0x32aa0 @ready=true>, "rack.input"=>#<Puma::NullIO:0x000000013f742d78>, "rack.after_reply"=>[], "puma.config"=>#<Puma::Configuration:0x000000013f779c38 @options=#<Puma::UserFileDefaultOptions:0x000000013f7799e0 @user_options={:app=>#<EcommerceApp::Application>, :environment=>"development"}, @file_options={:default_host=>"localhost", :min_threads=>5, :max_threads=>5, :worker_timeout=>3600, :binds=>["tcp://localhost:3000"], :environment=>"development", :pidfile=>"tmp/pids/server.pid"}, @default_options={:min_threads=>0, :max_threads=>5, :log_requests=>false, :debug=>false, :binds=>["tcp://localhost:3000"], :workers=>0, :silence_single_worker_warning=>false, :mode=>:http, :worker_check_interval=>5, :worker_timeout=>60, :worker_boot_timeout=>60, :worker_shutdown_timeout=>30, :worker_culling_strategy=>:youngest, :remote_address=>:socket, :tag=>"Ecommerce_ActiveAdmin", :environment=>"development", :rackup=>"config.ru", :logger=>#<IO:<STDOUT>>, :persistent_timeout=>20, :first_data_timeout=>30, :raise_exception_on_sigterm=>true, :max_fast_inline=>10, :io_selector_backend=>:auto, :mutate_stdout_and_stderr_to_sync_on_write=>true, :Verbose=>false, :Silent=>false, :server=>nil, :log_stdout=>true, :Port=>3000, :Host=>"localhost", :DoNotReverseLookup=>true, :config=>"config.ru", :daemonize=>false, :pid=>"/Users/marryamshahzad/Documents/rails_project/Ecommerce_ActiveAdmin/tmp/pids/server.pid", :caching=>nil, :restart_cmd=>"bin/rails server  --restart", :early_hints=>nil, :preload_app=>false}>, @plugins=#<Puma::PluginLoader:0x000000013f779968 @instances=[#<#<Class:0x000000013f782ae0>:0x000000013f782950>]>, @user_dsl=#<Puma::DSL:0x000000013f7798c8 @config=#<Puma::Configuration:0x000000013f779c38 ...>, @options={:app=>#<EcommerceApp::Application>, :environment=>"development"}, @plugins=[]>, @file_dsl=#<Puma::DSL:0x000000013f779850 @config=#<Puma::Configuration:0x000000013f779c38 ...>, @options={:default_host=>"localhost", :min_threads=>5, :max_threads=>5, :worker_timeout=>3600, :binds=>["tcp://localhost:3000"], :environment=>"development", :pidfile=>"tmp/pids/server.pid"}, @plugins=[], @path="config/puma.rb">, @default_dsl=#<Puma::DSL:0x000000013f7797d8 @config=#<Puma::Configuration:0x000000013f779c38 ...>, @options={:min_threads=>0, :max_threads=>5, :log_requests=>false, :debug=>false, :binds=>["tcp://localhost:3000"], :workers=>0, :silence_single_worker_warning=>false, :mode=>:http, :worker_check_interval=>5, :worker_timeout=>60, :worker_boot_timeout=>60, :worker_shutdown_timeout=>30, :worker_culling_strategy=>:youngest, :remote_address=>:socket, :tag=>"Ecommerce_ActiveAdmin", :environment=>"development", :rackup=>"config.ru", :logger=>#<IO:<STDOUT>>, :persistent_timeout=>20, :first_data_timeout=>30, :raise_exception_on_sigterm=>true, :max_fast_inline=>10, :io_selector_backend=>:auto, :mutate_stdout_and_stderr_to_sync_on_write=>true, :Verbose=>false, :Silent=>false, :server=>nil, :log_stdout=>true, :Port=>3000, :Host=>"localhost", :DoNotReverseLookup=>true, :config=>"config.ru", :daemonize=>false, :pid=>"/Users/marryamshahzad/Documents/rails_project/Ecommerce_ActiveAdmin/tmp/pids/server.pid", :caching=>nil, :restart_cmd=>"bin/rails server  --restart", :early_hints=>nil, :preload_app=>false}, @plugins=[]>>, "action_dispatch.parameter_filter"=>[:passw, :secret, :token, :_key, :crypt, :salt, :certificate, :otp, :ssn], "action_dispatch.redirect_filter"=>[], "action_dispatch.secret_key_base"=>"1d3c0dc0a53b44a27b55c4f7cfd57a3e42280e0f6adc71dbc9efd7f5c8ab735775afead0ad095b15b46a2e6aaf19198237401f8e8a8f3d9fe21e8f680c30965e", "action_dispatch.show_exceptions"=>true, "action_dispatch.show_detailed_exceptions"=>true, "action_dispatch.log_rescued_responses"=>true, "action_dispatch.logger"=>#<ActiveSupport::Logger:0x0000000149311ab0 @level=0, @progname=nil, @default_formatter=#<Logger::Formatter:0x000000014930bd68 @datetime_format=nil>, @formatter=#<ActiveSupport::Logger::SimpleFormatter:0x0000000149311a10 @datetime_format=nil, @thread_key="activesupport_tagged_logging_tags:21480">, @logdev=#<Logger::LogDevice:0x000000014930bc78 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=0, @filename="/Users/marryamshahzad/Documents/rails_project/Ecommerce_ActiveAdmin/log/development.log", @dev=#<File:/Users/marryamshahzad/Documents/rails_project/Ecommerce_ActiveAdmin/log/development.log>, @binmode=false, @mon_data=#<Monitor:0x000000014930bc50>, @mon_data_owner_object_id=4940>>, "action_dispatch.backtrace_cleaner"=>#<Rails::BacktraceCleaner:0x00000001496959e8 @silencers=[#<Proc:0x0000000149694f48 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.8/lib/active_support/backtrace_cleaner.rb:100>, #<Proc:0x0000000149694e58 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.8/lib/active_support/backtrace_cleaner.rb:104>, #<Proc:0x0000000149694ac0 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8/lib/rails/backtrace_cleaner.rb:24>], @filters=[#<Proc:0x0000000149695088 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.8/lib/active_support/backtrace_cleaner.rb:96>, #<Proc:0x0000000149694b88 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8/lib/rails/backtrace_cleaner.rb:14>, #<Proc:0x0000000149694ae8 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8/lib/rails/backtrace_cleaner.rb:17>], @root="/Users/marryamshahzad/Documents/rails_project/Ecommerce_ActiveAdmin/">, "action_dispatch.key_generator"=>#<ActiveSupport::CachingKeyGenerator:0x000000013b93a8f0 @key_generator=#<ActiveSupport::KeyGenerator:0x000000013b93a918 @secret="1d3c0dc0a53b44a27b55c4f7cfd57a3e42280e0f6adc71dbc9efd7f5c8ab735775afead0ad095b15b46a2e6aaf19198237401f8e8a8f3d9fe21e8f680c30965e", @iterations=1000, @hash_digest_class=OpenSSL::Digest::SHA256>, @cache_keys=#<Concurrent::Map:0x000000013b93a8c8 entries=6 default_proc=nil>>, "action_dispatch.http_auth_salt"=>"http authentication", "action_dispatch.signed_cookie_salt"=>"signed cookie", "action_dispatch.encrypted_cookie_salt"=>"encrypted cookie", "action_dispatch.encrypted_signed_cookie_salt"=>"signed encrypted cookie", "action_dispatch.authenticated_encrypted_cookie_salt"=>"authenticated encrypted cookie", "action_dispatch.use_authenticated_cookie_encryption"=>true, "action_dispatch.encrypted_cookie_cipher"=>nil, "action_dispatch.signed_cookie_digest"=>nil, "action_dispatch.cookies_serializer"=>:json, "action_dispatch.cookies_digest"=>nil, "action_dispatch.cookies_rotations"=>#<ActiveSupport::Messages::RotationConfiguration:0x000000015beb6638 @signed=[], @encrypted=[]>, "action_dispatch.cookies_same_site_protection"=>#<Proc:0x000000013f80f468 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8/lib/rails/application.rb:609>, "action_dispatch.use_cookies_with_metadata"=>true, "action_dispatch.content_security_policy"=>nil, "action_dispatch.content_security_policy_report_only"=>false, "action_dispatch.content_security_policy_nonce_generator"=>nil, "action_dispatch.content_security_policy_nonce_directives"=>nil, "action_dispatch.permissions_policy"=>nil, "action_dispatch.routes"=>#<ActionDispatch::Routing::RouteSet:0x000000013b6a1968>, "ROUTES_16000_SCRIPT_NAME"=>"", "ORIGINAL_FULLPATH"=>"/api/v1/product_masters/1", "ORIGINAL_SCRIPT_NAME"=>"", "action_dispatch.authorized_host"=>"localhost", "action_dispatch.request_id"=>"4fa79977-9326-49ea-a316-727e0cacea69", "action_dispatch.remote_ip"=>#<ActionDispatch::RemoteIp::GetIp:0x000000014a90bcf8 @req=#<ActionDispatch::Request GET "http://localhost:3000/api/v1/product_masters/1" for ::1>, @check_ip=true, @proxies=[#<IPAddr: IPv4:127.0.0.0/255.0.0.0>, #<IPAddr: IPv6:0000:0000:0000:0000:0000:0000:0000:0001/ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff>, #<IPAddr: IPv6:fc00:0000:0000:0000:0000:0000:0000:0000/fe00:0000:0000:0000:0000:0000:0000:0000>, #<IPAddr: IPv4:10.0.0.0/255.0.0.0>, #<IPAddr: IPv4:172.16.0.0/255.240.0.0>, #<IPAddr: IPv4:192.168.0.0/255.255.0.0>], @ip="::1">, "rack.session"=>#<ActionDispatch::Request::Session:0x65568 not yet loaded>, "rack.session.options"=>#<ActionDispatch::Request::Session::Options:0x000000014a8a6bc8 @by=#<ActionDispatch::Session::CookieStore:0x000000013b7bb308 @app=#<ActionDispatch::ContentSecurityPolicy::Middleware:0x000000013b7bb3d0 @app=#<ActionDispatch::PermissionsPolicy::Middleware:0x000000013b7bb470 @app=#<Rack::Head:0x000000013b7bb4e8 @app=#<Rack::ConditionalGet:0x000000013b7bb560 @app=#<Rack::ETag:0x000000013b7bb600 @app=#<Rack::TempfileReaper:0x000000013b7bb678 @app=#<Warden::Manager:0x000000013b7bb8d0 @config={:default_scope=>:admin_user, :scope_defaults=>{}, :default_strategies=>{:admin_user=>[:rememberable, :database_authenticatable]}, :intercept_401=>false, :failure_app=>#<Devise::Delegator:0x000000013d5d87f0>}, @app=#<ActionDispatch::Routing::RouteSet:0x000000013b6a1968>>>, @cache_control="max-age=0, private, must-revalidate", @no_cache_control="no-cache">>>>>, @default_options={:path=>"/", :domain=>nil, :expire_after=>nil, :secure=>false, :httponly=>true, :defer=>false, :renew=>false}, @key="_ecommerce_app_session", @cookie_only=true, @same_site=nil>, @delegate={:path=>"/", :domain=>nil, :expire_after=>nil, :secure=>false, :httponly=>true, :defer=>false, :renew=>false}>, "rack.tempfiles"=>[], "warden"=>Warden::Proxy:207560 @config={:default_scope=>:admin_user, :scope_defaults=>{}, :default_strategies=>{:admin_user=>[:rememberable, :database_authenticatable]}, :intercept_401=>false, :failure_app=>#<Devise::Delegator:0x000000013d5d87f0>}, "action_dispatch.request.path_parameters"=>{}, "grape.routing_args"=>{:route_info=>#<Grape::Router::Route:0x000000014b49bd48 @options={:params=>{"id"=>{:required=>true, :type=>"Integer"}}, :description=>"Get a specific product", :namespace=>"/product_masters/:id", :version=>nil, :requirements=>{}, :prefix=>nil, :anchor=>true, :settings=>{:description=>{:description=>"Get a specific product"}}, :forward_match=>nil, :suffix=>"(.json)", :method=>"GET"}, @pattern=#<Grape::Router::Pattern:0x000000014b49bb90 @origin="/product_masters/:id", @path="/product_masters/:id(.json)", @pattern=#<Mustermann::Grape:"/product_masters/:id(.json)">, @to_regexp=/\A(?-mix:\/(?:p|%70)(?:r|%72)(?:o|%6f|%6F)(?:d|%64)(?:u|%75)(?:c|%63)(?:t|%74)(?:_|%5f|%5F)(?:m|%6d|%6D)(?:a|%61)(?:s|%73)(?:t|%74)(?:e|%65)(?:r|%72)(?:s|%73)\/(?<id>(?:(?!(?:\.|%2e|%2E)(?:j|%6a|%6A)(?:s|%73)(?:o|%6f|%6F)(?:n|%6e|%6E)$)[^\/\?#.])+)(?:(?:\.|%2e|%2E)(?:j|%6a|%6A)(?:s|%73)(?:o|%6f|%6F)(?:n|%6e|%6E))?)\Z/>, @translator=#<Grape::Router::AttributeTranslator:0x000000014b49b500 @attributes={:params=>{"id"=>{:required=>true, :type=>"Integer"}}, :description=>"Get a specific product", :namespace=>"/product_masters/:id", :version=>nil, :requirements=>{}, :prefix=>nil, :anchor=>true, :settings=>{:description=>{:description=>"Get a specific product"}}, :forward_match=>nil, :suffix=>"(.json)", :request_method=>"GET"}>, @app=#<#<Class:0x000000014b698948>:0x000000014b6986f0 @inheritable_setting=#<Grape::Util::InheritableSetting:0x000000014b698650 @route={:description=>{:description=>"Get a specific product"}, :declared_params=>[#<Grape::Validations::ParamsScope::Attr:0x000000014b6998e8 @key=:id, @scope=#<Grape::Validations::ParamsScope:0x000000014b69a1a8 @element=nil, @element_renamed=nil, @parent=nil, @api=#<Class:0x000000014b6b1038>, @optional=false, @type=Hash, @group=nil, @dependent_on=nil, @declared_params=nil, @index=nil>>], :saved_validations=>[{:attributes=>[:id], :options=>{:value=>true, :message=>nil}, :required=>true, :params_scope=>#<Grape::Validations::ParamsScope:0x000000014b69a1a8 @element=nil, @element_renamed=nil, @parent=nil, @api=#<Class:0x000000014b6b1038>, @optional=false, @type=Hash, @group=nil, @dependent_on=nil, @declared_params=nil, @index=nil>, :opts=>{:allow_blank=>nil, :fail_fast=>false}, :validator_class=>Grape::Validations::Validators::PresenceValidator}, {:attributes=>[:id], :options=>{:type=>Integer, :method=>nil, :message=>nil}, :required=>true, :params_scope=>#<Grape::Validations::ParamsScope:0x000000014b69a1a8 @element=nil, @element_renamed=nil, @parent=nil, @api=#<Class:0x000000014b6b1038>, @optional=false, @type=Hash, @group=nil, @dependent_on=nil, @declared_params=nil, @index=nil>, :opts=>{:allow_blank=>nil, :fail_fast=>false}, :validator_class=>Grape::Validations::Validators::CoerceValidator}]}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b698380 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b698218 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6a0ad0 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @new_values={}>, @new_values={:default_error_status=>500}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6981c8 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6a0a08 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @new_values={:namespace=>[#<Grape::Namespace:0x000000014b6a0198 @space="product_masters", @options={}>]}>, @new_values={:namespace=>[#<Grape::Namespace:0x000000014b698fb0 @space=":id", @options={}>]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b698178 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6a0990 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @new_values={}>, @new_values={}>, @point_in_time_copies=[], @parent=#<Grape::Util::InheritableSetting:0x000000014b6a0cb0 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6a0b48 @inherited_values={}, @new_values={:description=>{:description=>"Get a specific product"}}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6a0ad0 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @new_values={}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6a0a08 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @new_values={:namespace=>[#<Grape::Namespace:0x000000014b6a0198 @space="product_masters", @options={}>]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6a0990 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @new_values={}>, @point_in_time_copies=[#<Grape::Util::InheritableSetting:0x000000014b69b6e8 @route={:description=>{:description=>"Get a list of products"}, :declared_params=>[], :saved_validations=>[]}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b69b198 @inherited_values={}, @new_values={:description=>{:description=>"Get a list of products"}}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b69b120 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @new_values={:default_error_status=>500}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b69b0d0 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @new_values={:namespace=>[#<Grape::Namespace:0x000000014b6a0198 @space="product_masters", @options={}>]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b69af68 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @new_values={}>, @point_in_time_copies=[], @parent=#<Grape::Util::InheritableSetting:0x000000014b6b0bb0 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6b0ac0 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @point_in_time_copies=[], @parent=#<Grape::Util::InheritableSetting:0x000000014b6b04a8 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6b03e0 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @point_in_time_copies=[], @parent=nil>>>], @parent=#<Grape::Util::InheritableSetting:0x000000014b6b0bb0 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6b0ac0 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @point_in_time_copies=[], @parent=#<Grape::Util::InheritableSetting:0x000000014b6b04a8 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6b03e0 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @point_in_time_copies=[], @parent=nil>>>>, @options={:method=>["GET"], :path=>["/"], :for=>#<Class:0x000000014b6b1038>, :route_options=>{:params=>{"id"=>{:required=>true, :type=>"Integer"}}, :description=>"Get a specific product"}, :options_route_enabled=>true}, @lazy_initialize_lock=#<Thread::Mutex:0x000000014b693a88>, @lazy_initialized=true, @block=#<Proc:0x000000014b692de0 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/grape-1.8.0/lib/grape/endpoint.rb:56>, @status=nil, @stream=nil, @body=nil, @proc=nil, @source=#<Proc:0x000000014b698e20 /Users/marryamshahzad/Documents/rails_project/Ecommerce_ActiveAdmin/app/api/v1.rb:16>, @namespace="/product_masters/:id", @routes=[#<Grape::Router::Route:0x000000014b49bd48 ...>], @helpers=#<Module:0x000000014a8a59d0>, @app=#<Rack::Head:0x000000014a8a4a30 @app=#<#<Class:0x000000014a8a5818>:0x000000014a8a4cb0 @app=#<Grape::Middleware::Formatter:0x000000014a8a4df0 @app=#<Proc:0x000000014a8a4eb8 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/grape-1.8.0/lib/grape/endpoint.rb:316 (lambda)>, @options={:default_format=>:txt, :formatters=>nil, :parsers=>nil, :format=>:json, :content_types=>{:json=>"application/json"}}, @app_response=nil>, @options={:default_status=>500, :default_message=>"", :format=>:json, :helpers=>#<Module:0x000000014a8a59d0>, :formatters=>{}, :error_formatters=>nil, :rescue_all=>nil, :rescue_grape_exceptions=>nil, :rescue_subclasses=>true, :rescue_options=>{}, :rescue_handlers=>{}, :base_only_rescue_handlers=>{}, :all_rescue_handler=>nil, :content_types=>{:json=>"application/json"}, :default_error_formatter=>Grape::ErrorFormatter::Json, :grape_exceptions_rescue_handler=>nil}, @app_response=nil>>>, @index=1>, :id=>"1"}, "api.endpoint"=>#<#<Class:0x000000014b698948>:0x000000014a8a49e0 ...>, "api.format"=>:json, "rack.request.query_string"=>"", "rack.request.query_hash"=>{}, "rack.request.cookie_hash"=>{"_ecommerce_app_session"=>"3Wwpa0n/x4G+DWbmZPOCFVI48/nx6U/e9Uly7TjxUz85cewPEJ55eHoyaI86gbRtILr9ZMFN61fiEVz8uNo61S8S4njeQaBUqdySGpffOiLZ/g+EcP5DFAmKd3WpGxjGPbf0EB2h27vFKy92T9rycXFIIw33XDWiw36DhDdC6839JG64kIIZzittNKs5cYVKUf/cwjFBAVbrFrzV/byiYrX8f/2LiRsUyBX2Fn0XivyIu28hWKnPNnVkYlmlOuBMLcCKfMTRSe1C2p+GznM9xxoXUIP6jZssXDSqRzBNWldZmEasLax11bT/YwFaquerxHDsAx2rrnLGx7ucassjxFW9Ssrdkt+OjOo5tEkUjwQYNxNhFEUzUib+N4Izx41Ha3UbJhFrSVn139wVCCSKyUHaqe/Uqg==--qFNW9ORGiNcEsqkb--qjktsUfL18uEji6qwtrxKQ==", "_shopshop_postgresql_session"=>"+DQw0T12JHSX1hn2sdHdS4OZHFMxxQBnwLtypO5jan5cFGNgRTo1qXAzQt6wjwJqYVuVwlzKvT5Lp8iIDoiB0f3gtg9IjgqVHP3WfrLUJNqPRaJzU8x11YsbzbJAOI063zRBpeuWorT6fr1ouiAMe1BPhDEik3A8YYTQHeLVYf/rNcGNmpDbtCZy7GVdOvqqcCacGtcu5C71qXQu7dbL/eicr5uEME5UjsAQUrXYJoz4IAhhSsYAl9pFVZZzzuMCfO2ic6xXTqBGk2MNsq4vVx6g4lbWo8woO4nrFITkRDXYfpxaFCSe7qlVlr851V0UOdxoX+4dVJ4qjECAum72G40rO4GKGF6MEXuwlw/bf4NyCDTiCsBzH8pC0K5HTyYJNaRGy+UqPFGidobFelyQYpPhWA1GMzwo0R9ZpLTxRDzkSWTx--LyRZ8LpmNM6z64HD--8ZiSVqbvBo9XG+UJZ2oKSw==", "guest_token"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IklqTlRObkl6WDE5Q1pXcHJRbGM1WldWcVNsVnpRbEVpIiwiZXhwIjpudWxsLCJwdXIiOiJjb29raWUuZ3Vlc3RfdG9rZW4ifX0=--fbc7e60bea46160e1ee84c321e1bfa2effe6a5b8"}, "rack.request.cookie_string"=>"_ecommerce_app_session=3Wwpa0n%2Fx4G%2BDWbmZPOCFVI48%2Fnx6U%2Fe9Uly7TjxUz85cewPEJ55eHoyaI86gbRtILr9ZMFN61fiEVz8uNo61S8S4njeQaBUqdySGpffOiLZ%2Fg%2BEcP5DFAmKd3WpGxjGPbf0EB2h27vFKy92T9rycXFIIw33XDWiw36DhDdC6839JG64kIIZzittNKs5cYVKUf%2FcwjFBAVbrFrzV%2FbyiYrX8f%2F2LiRsUyBX2Fn0XivyIu28hWKnPNnVkYlmlOuBMLcCKfMTRSe1C2p%2BGznM9xxoXUIP6jZssXDSqRzBNWldZmEasLax11bT%2FYwFaquerxHDsAx2rrnLGx7ucassjxFW9Ssrdkt%2BOjOo5tEkUjwQYNxNhFEUzUib%2BN4Izx41Ha3UbJhFrSVn139wVCCSKyUHaqe%2FUqg%3D%3D--qFNW9ORGiNcEsqkb--qjktsUfL18uEji6qwtrxKQ%3D%3D; _shopshop_postgresql_session=%2BDQw0T12JHSX1hn2sdHdS4OZHFMxxQBnwLtypO5jan5cFGNgRTo1qXAzQt6wjwJqYVuVwlzKvT5Lp8iIDoiB0f3gtg9IjgqVHP3WfrLUJNqPRaJzU8x11YsbzbJAOI063zRBpeuWorT6fr1ouiAMe1BPhDEik3A8YYTQHeLVYf%2FrNcGNmpDbtCZy7GVdOvqqcCacGtcu5C71qXQu7dbL%2Feicr5uEME5UjsAQUrXYJoz4IAhhSsYAl9pFVZZzzuMCfO2ic6xXTqBGk2MNsq4vVx6g4lbWo8woO4nrFITkRDXYfpxaFCSe7qlVlr851V0UOdxoX%2B4dVJ4qjECAum72G40rO4GKGF6MEXuwlw%2Fbf4NyCDTiCsBzH8pC0K5HTyYJNaRGy%2BUqPFGidobFelyQYpPhWA1GMzwo0R9ZpLTxRDzkSWTx--LyRZ8LpmNM6z64HD--8ZiSVqbvBo9XG%2BUJZ2oKSw%3D%3D; guest_token=eyJfcmFpbHMiOnsibWVzc2FnZSI6IklqTlRObkl6WDE5Q1pXcHJRbGM1WldWcVNsVnpRbEVpIiwiZXhwIjpudWxsLCJwdXIiOiJjb29raWUuZ3Vlc3RfdG9rZW4ifX0%3D--fbc7e60bea46160e1ee84c321e1bfa2effe6a5b8"}, @header={}, @request=#<Grape::Request:0x000000014a8a4530 @params={"id"=>1}, @env={"rack.version"=>[1, 6], "rack.errors"=>#<IO:<STDERR>>, "rack.multithread"=>true, "rack.multiprocess"=>false, "rack.run_once"=>false, "rack.url_scheme"=>"http", "SCRIPT_NAME"=>"/api/v1", "QUERY_STRING"=>"", "SERVER_PROTOCOL"=>"HTTP/1.1", "SERVER_SOFTWARE"=>"puma 5.6.7 Birdie's Version", "GATEWAY_INTERFACE"=>"CGI/1.2", "REQUEST_METHOD"=>"GET", "REQUEST_PATH"=>"/api/v1/product_masters/1", "REQUEST_URI"=>"/api/v1/product_masters/1", "HTTP_VERSION"=>"HTTP/1.1", "HTTP_HOST"=>"localhost:3000", "HTTP_SEC_FETCH_SITE"=>"none", "HTTP_IF_NONE_MATCH"=>"W/\"d4bcbd22e99fb39e4d869be2b2c7c563\"", "HTTP_ACCEPT_LANGUAGE"=>"en-GB,en;q=0.9", "HTTP_SEC_FETCH_MODE"=>"navigate", "HTTP_ACCEPT_ENCODING"=>"gzip, deflate", "HTTP_ACCEPT"=>"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "HTTP_USER_AGENT"=>"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15", "HTTP_CONNECTION"=>"keep-alive", "HTTP_UPGRADE_INSECURE_REQUESTS"=>"1", "HTTP_COOKIE"=>"_ecommerce_app_session=3Wwpa0n%2Fx4G%2BDWbmZPOCFVI48%2Fnx6U%2Fe9Uly7TjxUz85cewPEJ55eHoyaI86gbRtILr9ZMFN61fiEVz8uNo61S8S4njeQaBUqdySGpffOiLZ%2Fg%2BEcP5DFAmKd3WpGxjGPbf0EB2h27vFKy92T9rycXFIIw33XDWiw36DhDdC6839JG64kIIZzittNKs5cYVKUf%2FcwjFBAVbrFrzV%2FbyiYrX8f%2F2LiRsUyBX2Fn0XivyIu28hWKnPNnVkYlmlOuBMLcCKfMTRSe1C2p%2BGznM9xxoXUIP6jZssXDSqRzBNWldZmEasLax11bT%2FYwFaquerxHDsAx2rrnLGx7ucassjxFW9Ssrdkt%2BOjOo5tEkUjwQYNxNhFEUzUib%2BN4Izx41Ha3UbJhFrSVn139wVCCSKyUHaqe%2FUqg%3D%3D--qFNW9ORGiNcEsqkb--qjktsUfL18uEji6qwtrxKQ%3D%3D; _shopshop_postgresql_session=%2BDQw0T12JHSX1hn2sdHdS4OZHFMxxQBnwLtypO5jan5cFGNgRTo1qXAzQt6wjwJqYVuVwlzKvT5Lp8iIDoiB0f3gtg9IjgqVHP3WfrLUJNqPRaJzU8x11YsbzbJAOI063zRBpeuWorT6fr1ouiAMe1BPhDEik3A8YYTQHeLVYf%2FrNcGNmpDbtCZy7GVdOvqqcCacGtcu5C71qXQu7dbL%2Feicr5uEME5UjsAQUrXYJoz4IAhhSsYAl9pFVZZzzuMCfO2ic6xXTqBGk2MNsq4vVx6g4lbWo8woO4nrFITkRDXYfpxaFCSe7qlVlr851V0UOdxoX%2B4dVJ4qjECAum72G40rO4GKGF6MEXuwlw%2Fbf4NyCDTiCsBzH8pC0K5HTyYJNaRGy%2BUqPFGidobFelyQYpPhWA1GMzwo0R9ZpLTxRDzkSWTx--LyRZ8LpmNM6z64HD--8ZiSVqbvBo9XG%2BUJZ2oKSw%3D%3D; guest_token=eyJfcmFpbHMiOnsibWVzc2FnZSI6IklqTlRObkl6WDE5Q1pXcHJRbGM1WldWcVNsVnpRbEVpIiwiZXhwIjpudWxsLCJwdXIiOiJjb29raWUuZ3Vlc3RfdG9rZW4ifX0%3D--fbc7e60bea46160e1ee84c321e1bfa2effe6a5b8", "HTTP_SEC_FETCH_DEST"=>"document", "puma.request_body_wait"=>0, "SERVER_NAME"=>"localhost", "SERVER_PORT"=>"3000", "PATH_INFO"=>"/product_masters/1", "REMOTE_ADDR"=>"::1", "puma.socket"=>#<TCPSocket:fd 18, AF_INET6, ::1, 3000>, "rack.hijack?"=>true, "rack.hijack"=>#<Puma::Client:0x32aa0 @ready=true>, "rack.input"=>#<Puma::NullIO:0x000000013f742d78>, "rack.after_reply"=>[], "puma.config"=>#<Puma::Configuration:0x000000013f779c38 @options=#<Puma::UserFileDefaultOptions:0x000000013f7799e0 @user_options={:app=>#<EcommerceApp::Application>, :environment=>"development"}, @file_options={:default_host=>"localhost", :min_threads=>5, :max_threads=>5, :worker_timeout=>3600, :binds=>["tcp://localhost:3000"], :environment=>"development", :pidfile=>"tmp/pids/server.pid"}, @default_options={:min_threads=>0, :max_threads=>5, :log_requests=>false, :debug=>false, :binds=>["tcp://localhost:3000"], :workers=>0, :silence_single_worker_warning=>false, :mode=>:http, :worker_check_interval=>5, :worker_timeout=>60, :worker_boot_timeout=>60, :worker_shutdown_timeout=>30, :worker_culling_strategy=>:youngest, :remote_address=>:socket, :tag=>"Ecommerce_ActiveAdmin", :environment=>"development", :rackup=>"config.ru", :logger=>#<IO:<STDOUT>>, :persistent_timeout=>20, :first_data_timeout=>30, :raise_exception_on_sigterm=>true, :max_fast_inline=>10, :io_selector_backend=>:auto, :mutate_stdout_and_stderr_to_sync_on_write=>true, :Verbose=>false, :Silent=>false, :server=>nil, :log_stdout=>true, :Port=>3000, :Host=>"localhost", :DoNotReverseLookup=>true, :config=>"config.ru", :daemonize=>false, :pid=>"/Users/marryamshahzad/Documents/rails_project/Ecommerce_ActiveAdmin/tmp/pids/server.pid", :caching=>nil, :restart_cmd=>"bin/rails server  --restart", :early_hints=>nil, :preload_app=>false}>, @plugins=#<Puma::PluginLoader:0x000000013f779968 @instances=[#<#<Class:0x000000013f782ae0>:0x000000013f782950>]>, @user_dsl=#<Puma::DSL:0x000000013f7798c8 @config=#<Puma::Configuration:0x000000013f779c38 ...>, @options={:app=>#<EcommerceApp::Application>, :environment=>"development"}, @plugins=[]>, @file_dsl=#<Puma::DSL:0x000000013f779850 @config=#<Puma::Configuration:0x000000013f779c38 ...>, @options={:default_host=>"localhost", :min_threads=>5, :max_threads=>5, :worker_timeout=>3600, :binds=>["tcp://localhost:3000"], :environment=>"development", :pidfile=>"tmp/pids/server.pid"}, @plugins=[], @path="config/puma.rb">, @default_dsl=#<Puma::DSL:0x000000013f7797d8 @config=#<Puma::Configuration:0x000000013f779c38 ...>, @options={:min_threads=>0, :max_threads=>5, :log_requests=>false, :debug=>false, :binds=>["tcp://localhost:3000"], :workers=>0, :silence_single_worker_warning=>false, :mode=>:http, :worker_check_interval=>5, :worker_timeout=>60, :worker_boot_timeout=>60, :worker_shutdown_timeout=>30, :worker_culling_strategy=>:youngest, :remote_address=>:socket, :tag=>"Ecommerce_ActiveAdmin", :environment=>"development", :rackup=>"config.ru", :logger=>#<IO:<STDOUT>>, :persistent_timeout=>20, :first_data_timeout=>30, :raise_exception_on_sigterm=>true, :max_fast_inline=>10, :io_selector_backend=>:auto, :mutate_stdout_and_stderr_to_sync_on_write=>true, :Verbose=>false, :Silent=>false, :server=>nil, :log_stdout=>true, :Port=>3000, :Host=>"localhost", :DoNotReverseLookup=>true, :config=>"config.ru", :daemonize=>false, :pid=>"/Users/marryamshahzad/Documents/rails_project/Ecommerce_ActiveAdmin/tmp/pids/server.pid", :caching=>nil, :restart_cmd=>"bin/rails server  --restart", :early_hints=>nil, :preload_app=>false}, @plugins=[]>>, "action_dispatch.parameter_filter"=>[:passw, :secret, :token, :_key, :crypt, :salt, :certificate, :otp, :ssn], "action_dispatch.redirect_filter"=>[], "action_dispatch.secret_key_base"=>"1d3c0dc0a53b44a27b55c4f7cfd57a3e42280e0f6adc71dbc9efd7f5c8ab735775afead0ad095b15b46a2e6aaf19198237401f8e8a8f3d9fe21e8f680c30965e", "action_dispatch.show_exceptions"=>true, "action_dispatch.show_detailed_exceptions"=>true, "action_dispatch.log_rescued_responses"=>true, "action_dispatch.logger"=>#<ActiveSupport::Logger:0x0000000149311ab0 @level=0, @progname=nil, @default_formatter=#<Logger::Formatter:0x000000014930bd68 @datetime_format=nil>, @formatter=#<ActiveSupport::Logger::SimpleFormatter:0x0000000149311a10 @datetime_format=nil, @thread_key="activesupport_tagged_logging_tags:21480">, @logdev=#<Logger::LogDevice:0x000000014930bc78 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=0, @filename="/Users/marryamshahzad/Documents/rails_project/Ecommerce_ActiveAdmin/log/development.log", @dev=#<File:/Users/marryamshahzad/Documents/rails_project/Ecommerce_ActiveAdmin/log/development.log>, @binmode=false, @mon_data=#<Monitor:0x000000014930bc50>, @mon_data_owner_object_id=4940>>, "action_dispatch.backtrace_cleaner"=>#<Rails::BacktraceCleaner:0x00000001496959e8 @silencers=[#<Proc:0x0000000149694f48 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.8/lib/active_support/backtrace_cleaner.rb:100>, #<Proc:0x0000000149694e58 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.8/lib/active_support/backtrace_cleaner.rb:104>, #<Proc:0x0000000149694ac0 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8/lib/rails/backtrace_cleaner.rb:24>], @filters=[#<Proc:0x0000000149695088 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.8/lib/active_support/backtrace_cleaner.rb:96>, #<Proc:0x0000000149694b88 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8/lib/rails/backtrace_cleaner.rb:14>, #<Proc:0x0000000149694ae8 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8/lib/rails/backtrace_cleaner.rb:17>], @root="/Users/marryamshahzad/Documents/rails_project/Ecommerce_ActiveAdmin/">, "action_dispatch.key_generator"=>#<ActiveSupport::CachingKeyGenerator:0x000000013b93a8f0 @key_generator=#<ActiveSupport::KeyGenerator:0x000000013b93a918 @secret="1d3c0dc0a53b44a27b55c4f7cfd57a3e42280e0f6adc71dbc9efd7f5c8ab735775afead0ad095b15b46a2e6aaf19198237401f8e8a8f3d9fe21e8f680c30965e", @iterations=1000, @hash_digest_class=OpenSSL::Digest::SHA256>, @cache_keys=#<Concurrent::Map:0x000000013b93a8c8 entries=6 default_proc=nil>>, "action_dispatch.http_auth_salt"=>"http authentication", "action_dispatch.signed_cookie_salt"=>"signed cookie", "action_dispatch.encrypted_cookie_salt"=>"encrypted cookie", "action_dispatch.encrypted_signed_cookie_salt"=>"signed encrypted cookie", "action_dispatch.authenticated_encrypted_cookie_salt"=>"authenticated encrypted cookie", "action_dispatch.use_authenticated_cookie_encryption"=>true, "action_dispatch.encrypted_cookie_cipher"=>nil, "action_dispatch.signed_cookie_digest"=>nil, "action_dispatch.cookies_serializer"=>:json, "action_dispatch.cookies_digest"=>nil, "action_dispatch.cookies_rotations"=>#<ActiveSupport::Messages::RotationConfiguration:0x000000015beb6638 @signed=[], @encrypted=[]>, "action_dispatch.cookies_same_site_protection"=>#<Proc:0x000000013f80f468 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8/lib/rails/application.rb:609>, "action_dispatch.use_cookies_with_metadata"=>true, "action_dispatch.content_security_policy"=>nil, "action_dispatch.content_security_policy_report_only"=>false, "action_dispatch.content_security_policy_nonce_generator"=>nil, "action_dispatch.content_security_policy_nonce_directives"=>nil, "action_dispatch.permissions_policy"=>nil, "action_dispatch.routes"=>#<ActionDispatch::Routing::RouteSet:0x000000013b6a1968>, "ROUTES_16000_SCRIPT_NAME"=>"", "ORIGINAL_FULLPATH"=>"/api/v1/product_masters/1", "ORIGINAL_SCRIPT_NAME"=>"", "action_dispatch.authorized_host"=>"localhost", "action_dispatch.request_id"=>"4fa79977-9326-49ea-a316-727e0cacea69", "action_dispatch.remote_ip"=>#<ActionDispatch::RemoteIp::GetIp:0x000000014a90bcf8 @req=#<ActionDispatch::Request GET "http://localhost:3000/api/v1/product_masters/1" for ::1>, @check_ip=true, @proxies=[#<IPAddr: IPv4:127.0.0.0/255.0.0.0>, #<IPAddr: IPv6:0000:0000:0000:0000:0000:0000:0000:0001/ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff>, #<IPAddr: IPv6:fc00:0000:0000:0000:0000:0000:0000:0000/fe00:0000:0000:0000:0000:0000:0000:0000>, #<IPAddr: IPv4:10.0.0.0/255.0.0.0>, #<IPAddr: IPv4:172.16.0.0/255.240.0.0>, #<IPAddr: IPv4:192.168.0.0/255.255.0.0>], @ip="::1">, "rack.session"=>#<ActionDispatch::Request::Session:0x65568 not yet loaded>, "rack.session.options"=>#<ActionDispatch::Request::Session::Options:0x000000014a8a6bc8 @by=#<ActionDispatch::Session::CookieStore:0x000000013b7bb308 @app=#<ActionDispatch::ContentSecurityPolicy::Middleware:0x000000013b7bb3d0 @app=#<ActionDispatch::PermissionsPolicy::Middleware:0x000000013b7bb470 @app=#<Rack::Head:0x000000013b7bb4e8 @app=#<Rack::ConditionalGet:0x000000013b7bb560 @app=#<Rack::ETag:0x000000013b7bb600 @app=#<Rack::TempfileReaper:0x000000013b7bb678 @app=#<Warden::Manager:0x000000013b7bb8d0 @config={:default_scope=>:admin_user, :scope_defaults=>{}, :default_strategies=>{:admin_user=>[:rememberable, :database_authenticatable]}, :intercept_401=>false, :failure_app=>#<Devise::Delegator:0x000000013d5d87f0>}, @app=#<ActionDispatch::Routing::RouteSet:0x000000013b6a1968>>>, @cache_control="max-age=0, private, must-revalidate", @no_cache_control="no-cache">>>>>, @default_options={:path=>"/", :domain=>nil, :expire_after=>nil, :secure=>false, :httponly=>true, :defer=>false, :renew=>false}, @key="_ecommerce_app_session", @cookie_only=true, @same_site=nil>, @delegate={:path=>"/", :domain=>nil, :expire_after=>nil, :secure=>false, :httponly=>true, :defer=>false, :renew=>false}>, "rack.tempfiles"=>[], "warden"=>Warden::Proxy:207560 @config={:default_scope=>:admin_user, :scope_defaults=>{}, :default_strategies=>{:admin_user=>[:rememberable, :database_authenticatable]}, :intercept_401=>false, :failure_app=>#<Devise::Delegator:0x000000013d5d87f0>}, "action_dispatch.request.path_parameters"=>{}, "grape.routing_args"=>{:route_info=>#<Grape::Router::Route:0x000000014b49bd48 @options={:params=>{"id"=>{:required=>true, :type=>"Integer"}}, :description=>"Get a specific product", :namespace=>"/product_masters/:id", :version=>nil, :requirements=>{}, :prefix=>nil, :anchor=>true, :settings=>{:description=>{:description=>"Get a specific product"}}, :forward_match=>nil, :suffix=>"(.json)", :method=>"GET"}, @pattern=#<Grape::Router::Pattern:0x000000014b49bb90 @origin="/product_masters/:id", @path="/product_masters/:id(.json)", @pattern=#<Mustermann::Grape:"/product_masters/:id(.json)">, @to_regexp=/\A(?-mix:\/(?:p|%70)(?:r|%72)(?:o|%6f|%6F)(?:d|%64)(?:u|%75)(?:c|%63)(?:t|%74)(?:_|%5f|%5F)(?:m|%6d|%6D)(?:a|%61)(?:s|%73)(?:t|%74)(?:e|%65)(?:r|%72)(?:s|%73)\/(?<id>(?:(?!(?:\.|%2e|%2E)(?:j|%6a|%6A)(?:s|%73)(?:o|%6f|%6F)(?:n|%6e|%6E)$)[^\/\?#.])+)(?:(?:\.|%2e|%2E)(?:j|%6a|%6A)(?:s|%73)(?:o|%6f|%6F)(?:n|%6e|%6E))?)\Z/>, @translator=#<Grape::Router::AttributeTranslator:0x000000014b49b500 @attributes={:params=>{"id"=>{:required=>true, :type=>"Integer"}}, :description=>"Get a specific product", :namespace=>"/product_masters/:id", :version=>nil, :requirements=>{}, :prefix=>nil, :anchor=>true, :settings=>{:description=>{:description=>"Get a specific product"}}, :forward_match=>nil, :suffix=>"(.json)", :request_method=>"GET"}>, @app=#<#<Class:0x000000014b698948>:0x000000014b6986f0 @inheritable_setting=#<Grape::Util::InheritableSetting:0x000000014b698650 @route={:description=>{:description=>"Get a specific product"}, :declared_params=>[#<Grape::Validations::ParamsScope::Attr:0x000000014b6998e8 @key=:id, @scope=#<Grape::Validations::ParamsScope:0x000000014b69a1a8 @element=nil, @element_renamed=nil, @parent=nil, @api=#<Class:0x000000014b6b1038>, @optional=false, @type=Hash, @group=nil, @dependent_on=nil, @declared_params=nil, @index=nil>>], :saved_validations=>[{:attributes=>[:id], :options=>{:value=>true, :message=>nil}, :required=>true, :params_scope=>#<Grape::Validations::ParamsScope:0x000000014b69a1a8 @element=nil, @element_renamed=nil, @parent=nil, @api=#<Class:0x000000014b6b1038>, @optional=false, @type=Hash, @group=nil, @dependent_on=nil, @declared_params=nil, @index=nil>, :opts=>{:allow_blank=>nil, :fail_fast=>false}, :validator_class=>Grape::Validations::Validators::PresenceValidator}, {:attributes=>[:id], :options=>{:type=>Integer, :method=>nil, :message=>nil}, :required=>true, :params_scope=>#<Grape::Validations::ParamsScope:0x000000014b69a1a8 @element=nil, @element_renamed=nil, @parent=nil, @api=#<Class:0x000000014b6b1038>, @optional=false, @type=Hash, @group=nil, @dependent_on=nil, @declared_params=nil, @index=nil>, :opts=>{:allow_blank=>nil, :fail_fast=>false}, :validator_class=>Grape::Validations::Validators::CoerceValidator}]}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b698380 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b698218 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6a0ad0 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @new_values={}>, @new_values={:default_error_status=>500}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6981c8 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6a0a08 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @new_values={:namespace=>[#<Grape::Namespace:0x000000014b6a0198 @space="product_masters", @options={}>]}>, @new_values={:namespace=>[#<Grape::Namespace:0x000000014b698fb0 @space=":id", @options={}>]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b698178 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6a0990 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @new_values={}>, @new_values={}>, @point_in_time_copies=[], @parent=#<Grape::Util::InheritableSetting:0x000000014b6a0cb0 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6a0b48 @inherited_values={}, @new_values={:description=>{:description=>"Get a specific product"}}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6a0ad0 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @new_values={}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6a0a08 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @new_values={:namespace=>[#<Grape::Namespace:0x000000014b6a0198 @space="product_masters", @options={}>]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6a0990 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @new_values={}>, @point_in_time_copies=[#<Grape::Util::InheritableSetting:0x000000014b69b6e8 @route={:description=>{:description=>"Get a list of products"}, :declared_params=>[], :saved_validations=>[]}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b69b198 @inherited_values={}, @new_values={:description=>{:description=>"Get a list of products"}}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b69b120 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @new_values={:default_error_status=>500}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b69b0d0 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @new_values={:namespace=>[#<Grape::Namespace:0x000000014b6a0198 @space="product_masters", @options={}>]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b69af68 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @new_values={}>, @point_in_time_copies=[], @parent=#<Grape::Util::InheritableSetting:0x000000014b6b0bb0 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6b0ac0 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @point_in_time_copies=[], @parent=#<Grape::Util::InheritableSetting:0x000000014b6b04a8 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6b03e0 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @point_in_time_copies=[], @parent=nil>>>], @parent=#<Grape::Util::InheritableSetting:0x000000014b6b0bb0 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6b0ac0 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6b0930 @inherited_values=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @new_values={:format=>:json, :default_error_formatter=>Grape::ErrorFormatter::Json, :root_prefix=>nil, :version=>nil, :version_options=>nil}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6b0700 @inherited_values=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @new_values={:content_types=>[{:json=>"application/json"}]}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6b0638 @inherited_values=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @new_values={}>, @point_in_time_copies=[], @parent=#<Grape::Util::InheritableSetting:0x000000014b6b04a8 @route={}, @api_class={}, @namespace=#<Grape::Util::InheritableValues:0x000000014b6b03e0 @inherited_values={}, @new_values={}>, @namespace_inheritable=#<Grape::Util::InheritableValues:0x000000014b6b02f0 @inherited_values={}, @new_values={}>, @namespace_stackable=#<Grape::Util::StackableValues:0x000000014b6b0200 @inherited_values={}, @new_values={}>, @namespace_reverse_stackable=#<Grape::Util::ReverseStackableValues:0x000000014b6b0188 @inherited_values={}, @new_values={}>, @point_in_time_copies=[], @parent=nil>>>>, @options={:method=>["GET"], :path=>["/"], :for=>#<Class:0x000000014b6b1038>, :route_options=>{:params=>{"id"=>{:required=>true, :type=>"Integer"}}, :description=>"Get a specific product"}, :options_route_enabled=>true}, @lazy_initialize_lock=#<Thread::Mutex:0x000000014b693a88>, @lazy_initialized=true, @block=#<Proc:0x000000014b692de0 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/grape-1.8.0/lib/grape/endpoint.rb:56>, @status=nil, @stream=nil, @body=nil, @proc=nil, @source=#<Proc:0x000000014b698e20 /Users/marryamshahzad/Documents/rails_project/Ecommerce_ActiveAdmin/app/api/v1.rb:16>, @namespace="/product_masters/:id", @routes=[#<Grape::Router::Route:0x000000014b49bd48 ...>], @helpers=#<Module:0x000000014a8a59d0>, @app=#<Rack::Head:0x000000014a8a4a30 @app=#<#<Class:0x000000014a8a5818>:0x000000014a8a4cb0 @app=#<Grape::Middleware::Formatter:0x000000014a8a4df0 @app=#<Proc:0x000000014a8a4eb8 /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/grape-1.8.0/lib/grape/endpoint.rb:316 (lambda)>, @options={:default_format=>:txt, :formatters=>nil, :parsers=>nil, :format=>:json, :content_types=>{:json=>"application/json"}}, @app_response=nil>, @options={:default_status=>500, :default_message=>"", :format=>:json, :helpers=>#<Module:0x000000014a8a59d0>, :formatters=>{}, :error_formatters=>nil, :rescue_all=>nil, :rescue_grape_exceptions=>nil, :rescue_subclasses=>true, :rescue_options=>{}, :rescue_handlers=>{}, :base_only_rescue_handlers=>{}, :all_rescue_handler=>nil, :content_types=>{:json=>"application/json"}, :default_error_formatter=>Grape::ErrorFormatter::Json, :grape_exceptions_rescue_handler=>nil}, @app_response=nil>>>, @index=1>, :id=>"1"}, "api.endpoint"=>#<#<Class:0x000000014b698948>:0x000000014a8a49e0 ...>, "api.format"=>:json, "rack.request.query_string"=>"", "rack.request.query_hash"=>{}, "rack.request.cookie_hash"=>{"_ecommerce_app_session"=>"3Wwpa0n/x4G+DWbmZPOCFVI48/nx6U/e9Uly7TjxUz85cewPEJ55eHoyaI86gbRtILr9ZMFN61fiEVz8uNo61S8S4njeQaBUqdySGpffOiLZ/g+EcP5DFAmKd3WpGxjGPbf0EB2h27vFKy92T9rycXFIIw33XDWiw36DhDdC6839JG64kIIZzittNKs5cYVKUf/cwjFBAVbrFrzV/byiYrX8f/2LiRsUyBX2Fn0XivyIu28hWKnPNnVkYlmlOuBMLcCKfMTRSe1C2p+GznM9xxoXUIP6jZssXDSqRzBNWldZmEasLax11bT/YwFaquerxHDsAx2rrnLGx7ucassjxFW9Ssrdkt+OjOo5tEkUjwQYNxNhFEUzUib+N4Izx41Ha3UbJhFrSVn139wVCCSKyUHaqe/Uqg==--qFNW9ORGiNcEsqkb--qjktsUfL18uEji6qwtrxKQ==", "_shopshop_postgresql_session"=>"+DQw0T12JHSX1hn2sdHdS4OZHFMxxQBnwLtypO5jan5cFGNgRTo1qXAzQt6wjwJqYVuVwlzKvT5Lp8iIDoiB0f3gtg9IjgqVHP3WfrLUJNqPRaJzU8x11YsbzbJAOI063zRBpeuWorT6fr1ouiAMe1BPhDEik3A8YYTQHeLVYf/rNcGNmpDbtCZy7GVdOvqqcCacGtcu5C71qXQu7dbL/eicr5uEME5UjsAQUrXYJoz4IAhhSsYAl9pFVZZzzuMCfO2ic6xXTqBGk2MNsq4vVx6g4lbWo8woO4nrFITkRDXYfpxaFCSe7qlVlr851V0UOdxoX+4dVJ4qjECAum72G40rO4GKGF6MEXuwlw/bf4NyCDTiCsBzH8pC0K5HTyYJNaRGy+UqPFGidobFelyQYpPhWA1GMzwo0R9ZpLTxRDzkSWTx--LyRZ8LpmNM6z64HD--8ZiSVqbvBo9XG+UJZ2oKSw==", "guest_token"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IklqTlRObkl6WDE5Q1pXcHJRbGM1WldWcVNsVnpRbEVpIiwiZXhwIjpudWxsLCJwdXIiOiJjb29raWUuZ3Vlc3RfdG9rZW4ifX0=--fbc7e60bea46160e1ee84c321e1bfa2effe6a5b8"}, "rack.request.cookie_string"=>"_ecommerce_app_session=3Wwpa0n%2Fx4G%2BDWbmZPOCFVI48%2Fnx6U%2Fe9Uly7TjxUz85cewPEJ55eHoyaI86gbRtILr9ZMFN61fiEVz8uNo61S8S4njeQaBUqdySGpffOiLZ%2Fg%2BEcP5DFAmKd3WpGxjGPbf0EB2h27vFKy92T9rycXFIIw33XDWiw36DhDdC6839JG64kIIZzittNKs5cYVKUf%2FcwjFBAVbrFrzV%2FbyiYrX8f%2F2LiRsUyBX2Fn0XivyIu28hWKnPNnVkYlmlOuBMLcCKfMTRSe1C2p%2BGznM9xxoXUIP6jZssXDSqRzBNWldZmEasLax11bT%2FYwFaquerxHDsAx2rrnLGx7ucassjxFW9Ssrdkt%2BOjOo5tEkUjwQYNxNhFEUzUib%2BN4Izx41Ha3UbJhFrSVn139wVCCSKyUHaqe%2FUqg%3D%3D--qFNW9ORGiNcEsqkb--qjktsUfL18uEji6qwtrxKQ%3D%3D; _shopshop_postgresql_session=%2BDQw0T12JHSX1hn2sdHdS4OZHFMxxQBnwLtypO5jan5cFGNgRTo1qXAzQt6wjwJqYVuVwlzKvT5Lp8iIDoiB0f3gtg9IjgqVHP3WfrLUJNqPRaJzU8x11YsbzbJAOI063zRBpeuWorT6fr1ouiAMe1BPhDEik3A8YYTQHeLVYf%2FrNcGNmpDbtCZy7GVdOvqqcCacGtcu5C71qXQu7dbL%2Feicr5uEME5UjsAQUrXYJoz4IAhhSsYAl9pFVZZzzuMCfO2ic6xXTqBGk2MNsq4vVx6g4lbWo8woO4nrFITkRDXYfpxaFCSe7qlVlr851V0UOdxoX%2B4dVJ4qjECAum72G40rO4GKGF6MEXuwlw%2Fbf4NyCDTiCsBzH8pC0K5HTyYJNaRGy%2BUqPFGidobFelyQYpPhWA1GMzwo0R9ZpLTxRDzkSWTx--LyRZ8LpmNM6z64HD--8ZiSVqbvBo9XG%2BUJZ2oKSw%3D%3D; guest_token=eyJfcmFpbHMiOnsibWVzc2FnZSI6IklqTlRObkl6WDE5Q1pXcHJRbGM1WldWcVNsVnpRbEVpIiwiZXhwIjpudWxsLCJwdXIiOiJjb29raWUuZ3Vlc3RfdG9rZW4ifX0%3D--fbc7e60bea46160e1ee84c321e1bfa2effe6a5b8"}, @headers={"Version"=>"HTTP/1.1", "Host"=>"localhost:3000", "Sec-Fetch-Site"=>"none", "If-None-Match"=>"W/\"d4bcbd22e99fb39e4d869be2b2c7c563\"", "Accept-Language"=>"en-GB,en;q=0.9", "Sec-Fetch-Mode"=>"navigate", "Accept-Encoding"=>"gzip, deflate", "Accept"=>"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "User-Agent"=>"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15", "Connection"=>"keep-alive", "Upgrade-Insecure-Requests"=>"1", "Cookie"=>"_ecommerce_app_session=3Wwpa0n%2Fx4G%2BDWbmZPOCFVI48%2Fnx6U%2Fe9Uly7TjxUz85cewPEJ55eHoyaI86gbRtILr9ZMFN61fiEVz8uNo61S8S4njeQaBUqdySGpffOiLZ%2Fg%2BEcP5DFAmKd3WpGxjGPbf0EB2h27vFKy92T9rycXFIIw33XDWiw36DhDdC6839JG64kIIZzittNKs5cYVKUf%2FcwjFBAVbrFrzV%2FbyiYrX8f%2F2LiRsUyBX2Fn0XivyIu28hWKnPNnVkYlmlOuBMLcCKfMTRSe1C2p%2BGznM9xxoXUIP6jZssXDSqRzBNWldZmEasLax11bT%2FYwFaquerxHDsAx2rrnLGx7ucassjxFW9Ssrdkt%2BOjOo5tEkUjwQYNxNhFEUzUib%2BN4Izx41Ha3UbJhFrSVn139wVCCSKyUHaqe%2FUqg%3D%3D--qFNW9ORGiNcEsqkb--qjktsUfL18uEji6qwtrxKQ%3D%3D; _shopshop_postgresql_session=%2BDQw0T12JHSX1hn2sdHdS4OZHFMxxQBnwLtypO5jan5cFGNgRTo1qXAzQt6wjwJqYVuVwlzKvT5Lp8iIDoiB0f3gtg9IjgqVHP3WfrLUJNqPRaJzU8x11YsbzbJAOI063zRBpeuWorT6fr1ouiAMe1BPhDEik3A8YYTQHeLVYf%2FrNcGNmpDbtCZy7GVdOvqqcCacGtcu5C71qXQu7dbL%2Feicr5uEME5UjsAQUrXYJoz4IAhhSsYAl9pFVZZzzuMCfO2ic6xXTqBGk2MNsq4vVx6g4lbWo8woO4nrFITkRDXYfpxaFCSe7qlVlr851V0UOdxoX%2B4dVJ4qjECAum72G40rO4GKGF6MEXuwlw%2Fbf4NyCDTiCsBzH8pC0K5HTyYJNaRGy%2BUqPFGidobFelyQYpPhWA1GMzwo0R9ZpLTxRDzkSWTx--LyRZ8LpmNM6z64HD--8ZiSVqbvBo9XG%2BUJZ2oKSw%3D%3D; guest_token=eyJfcmFpbHMiOnsibWVzc2FnZSI6IklqTlRObkl6WDE5Q1pXcHJRbGM1WldWcVNsVnpRbEVpIiwiZXhwIjpudWxsLCJwdXIiOiJjb29raWUuZ3Vlc3RfdG9rZW4ifX0%3D--fbc7e60bea46160e1ee84c321e1bfa2effe6a5b8", "Sec-Fetch-Dest"=>"document"}>, @params={"id"=>1}, @headers={"Version"=>"HTTP/1.1", "Host"=>"localhost:3000", "Sec-Fetch-Site"=>"none", "If-None-Match"=>"W/\"d4bcbd22e99fb39e4d869be2b2c7c563\"", "Accept-Language"=>"en-GB,en;q=0.9", "Sec-Fetch-Mode"=>"navigate", "Accept-Encoding"=>"gzip, deflate", "Accept"=>"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "User-Agent"=>"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15", "Connection"=>"keep-alive", "Upgrade-Insecure-Requests"=>"1", "Cookie"=>"_ecommerce_app_session=3Wwpa0n%2Fx4G%2BDWbmZPOCFVI48%2Fnx6U%2Fe9Uly7TjxUz85cewPEJ55eHoyaI86gbRtILr9ZMFN61fiEVz8uNo61S8S4njeQaBUqdySGpffOiLZ%2Fg%2BEcP5DFAmKd3WpGxjGPbf0EB2h27vFKy92T9rycXFIIw33XDWiw36DhDdC6839JG64kIIZzittNKs5cYVKUf%2FcwjFBAVbrFrzV%2FbyiYrX8f%2F2LiRsUyBX2Fn0XivyIu28hWKnPNnVkYlmlOuBMLcCKfMTRSe1C2p%2BGznM9xxoXUIP6jZssXDSqRzBNWldZmEasLax11bT%2FYwFaquerxHDsAx2rrnLGx7ucassjxFW9Ssrdkt%2BOjOo5tEkUjwQYNxNhFEUzUib%2BN4Izx41Ha3UbJhFrSVn139wVCCSKyUHaqe%2FUqg%3D%3D--qFNW9ORGiNcEsqkb--qjktsUfL18uEji6qwtrxKQ%3D%3D; _shopshop_postgresql_session=%2BDQw0T12JHSX1hn2sdHdS4OZHFMxxQBnwLtypO5jan5cFGNgRTo1qXAzQt6wjwJqYVuVwlzKvT5Lp8iIDoiB0f3gtg9IjgqVHP3WfrLUJNqPRaJzU8x11YsbzbJAOI063zRBpeuWorT6fr1ouiAMe1BPhDEik3A8YYTQHeLVYf%2FrNcGNmpDbtCZy7GVdOvqqcCacGtcu5C71qXQu7dbL%2Feicr5uEME5UjsAQUrXYJoz4IAhhSsYAl9pFVZZzzuMCfO2ic6xXTqBGk2MNsq4vVx6g4lbWo8woO4nrFITkRDXYfpxaFCSe7qlVlr851V0UOdxoX%2B4dVJ4qjECAum72G40rO4GKGF6MEXuwlw%2Fbf4NyCDTiCsBzH8pC0K5HTyYJNaRGy%2BUqPFGidobFelyQYpPhWA1GMzwo0R9ZpLTxRDzkSWTx--LyRZ8LpmNM6z64HD--8ZiSVqbvBo9XG%2BUJZ2oKSw%3D%3D; guest_token=eyJfcmFpbHMiOnsibWVzc2FnZSI6IklqTlRObkl6WDE5Q1pXcHJRbGM1WldWcVNsVnpRbEVpIiwiZXhwIjpudWxsLCJwdXIiOiJjb29raWUuZ3Vlc3RfdG9rZW4ifX0%3D--fbc7e60bea46160e1ee84c321e1bfa2effe6a5b8", "Sec-Fetch-Dest"=>"document"}, @cookies=#<Grape::Cookies:0x000000013d77ff40 @cookies={"_ecommerce_app_session"=>"3Wwpa0n/x4G+DWbmZPOCFVI48/nx6U/e9Uly7TjxUz85cewPEJ55eHoyaI86gbRtILr9ZMFN61fiEVz8uNo61S8S4njeQaBUqdySGpffOiLZ/g+EcP5DFAmKd3WpGxjGPbf0EB2h27vFKy92T9rycXFIIw33XDWiw36DhDdC6839JG64kIIZzittNKs5cYVKUf/cwjFBAVbrFrzV/byiYrX8f/2LiRsUyBX2Fn0XivyIu28hWKnPNnVkYlmlOuBMLcCKfMTRSe1C2p+GznM9xxoXUIP6jZssXDSqRzBNWldZmEasLax11bT/YwFaquerxHDsAx2rrnLGx7ucassjxFW9Ssrdkt+OjOo5tEkUjwQYNxNhFEUzUib+N4Izx41Ha3UbJhFrSVn139wVCCSKyUHaqe/Uqg==--qFNW9ORGiNcEsqkb--qjktsUfL18uEji6qwtrxKQ==", "_shopshop_postgresql_session"=>"+DQw0T12JHSX1hn2sdHdS4OZHFMxxQBnwLtypO5jan5cFGNgRTo1qXAzQt6wjwJqYVuVwlzKvT5Lp8iIDoiB0f3gtg9IjgqVHP3WfrLUJNqPRaJzU8x11YsbzbJAOI063zRBpeuWorT6fr1ouiAMe1BPhDEik3A8YYTQHeLVYf/rNcGNmpDbtCZy7GVdOvqqcCacGtcu5C71qXQu7dbL/eicr5uEME5UjsAQUrXYJoz4IAhhSsYAl9pFVZZzzuMCfO2ic6xXTqBGk2MNsq4vVx6g4lbWo8woO4nrFITkRDXYfpxaFCSe7qlVlr851V0UOdxoX+4dVJ4qjECAum72G40rO4GKGF6MEXuwlw/bf4NyCDTiCsBzH8pC0K5HTyYJNaRGy+UqPFGidobFelyQYpPhWA1GMzwo0R9ZpLTxRDzkSWTx--LyRZ8LpmNM6z64HD--8ZiSVqbvBo9XG+UJZ2oKSw==", "guest_token"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IklqTlRObkl6WDE5Q1pXcHJRbGM1WldWcVNsVnpRbEVpIiwiZXhwIjpudWxsLCJwdXIiOiJjb29raWUuZ3Vlc3RfdG9rZW4ifX0=--fbc7e60bea46160e1ee84c321e1bfa2effe6a5b8"}, @send_cookies={}>>
+Did you mean?  proc):
+  
+app/api/v1.rb:18:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/product_masters/30" for ::1 at 2023-09-15 12:03:27 +0500
+  [1m[36mProductMaster Load (0.5ms)[0m  [1m[34mSELECT "product_masters".* FROM "product_masters" WHERE "product_masters"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:17:in `block (3 levels) in <class:API>'
+  
+ActiveRecord::RecordNotFound (Couldn't find ProductMaster with 'id'=30):
+  
+app/api/v1.rb:17:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/product_masters/30" for ::1 at 2023-09-15 12:04:00 +0500
+  [1m[36mProductMaster Load (0.2ms)[0m  [1m[34mSELECT "product_masters".* FROM "product_masters" WHERE "product_masters"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:17:in `block (3 levels) in <class:API>'
+  
+ActiveRecord::RecordNotFound (Couldn't find ProductMaster with 'id'=30):
+  
+app/api/v1.rb:17:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/product_masters/30" for ::1 at 2023-09-15 12:04:00 +0500
+  [1m[36mProductMaster Load (0.2ms)[0m  [1m[34mSELECT "product_masters".* FROM "product_masters" WHERE "product_masters"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:17:in `block (3 levels) in <class:API>'
+  
+ActiveRecord::RecordNotFound (Couldn't find ProductMaster with 'id'=30):
+  
+app/api/v1.rb:17:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/product_masters/30" for ::1 at 2023-09-15 12:04:22 +0500
+  [1m[36mProductMaster Load (0.3ms)[0m  [1m[34mSELECT "product_masters".* FROM "product_masters" WHERE "product_masters"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:17:in `block (3 levels) in <class:API>'
+  
+ActiveRecord::RecordNotFound (Couldn't find ProductMaster with 'id'=30):
+  
+app/api/v1.rb:17:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/product_masters/30" for ::1 at 2023-09-15 12:04:22 +0500
+  [1m[36mProductMaster Load (0.4ms)[0m  [1m[34mSELECT "product_masters".* FROM "product_masters" WHERE "product_masters"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:17:in `block (3 levels) in <class:API>'
+  
+ActiveRecord::RecordNotFound (Couldn't find ProductMaster with 'id'=30):
+  
+app/api/v1.rb:17:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/product_masters/30" for ::1 at 2023-09-15 12:04:50 +0500
+  [1m[36mProductMaster Load (0.2ms)[0m  [1m[34mSELECT "product_masters".* FROM "product_masters" WHERE "product_masters"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:17:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/product_masters" for ::1 at 2023-09-15 12:05:50 +0500
+  
+SyntaxError (/Users/marryamshahzad/Documents/rails_project/Ecommerce_ActiveAdmin/app/api/v1.rb:88: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/api/v1.rb:88: syntax error, unexpected end-of-input, expecting `end'
+app/api/v1.rb:88: syntax error, unexpected end-of-input, expecting `end'
+config/routes.rb:21:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/api/v1/brands" for ::1 at 2023-09-15 12:05:51 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/brands"):
+  
+Started GET "/api/v1/brands/100" for ::1 at 2023-09-15 12:06:13 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/brands/100"):
+  
+Started GET "/api/v1/brand" for ::1 at 2023-09-15 12:06:13 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/brand"):
+  
+Started GET "/api/v1/brands" for ::1 at 2023-09-15 12:06:16 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/brands"):
+  
+Started GET "/api/v1/brands" for ::1 at 2023-09-15 12:06:32 +0500
+  [1m[36mBrand Load (3.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+Started GET "/api/v1/brands/100" for ::1 at 2023-09-15 12:06:38 +0500
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 100], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:41:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/brands/3000" for ::1 at 2023-09-15 12:06:39 +0500
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 3000], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:41:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/product_masters" for ::1 at 2023-09-15 12:07:22 +0500
+  [1m[36mProductMaster Load (0.8ms)[0m  [1m[34mSELECT "product_masters".* FROM "product_masters"[0m
+Started GET "/api/v1/categories" for ::1 at 2023-09-15 12:07:22 +0500
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Started GET "/api/v1/categories/1" for ::1 at 2023-09-15 12:07:31 +0500
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:64:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/categories/2" for ::1 at 2023-09-15 12:07:31 +0500
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:64:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/categories/2" for ::1 at 2023-09-15 12:07:39 +0500
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:64:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/categories/30" for ::1 at 2023-09-15 12:07:40 +0500
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:64:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/categories/30" for ::1 at 2023-09-15 12:08:32 +0500
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:64:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/product_masters" for ::1 at 2023-09-15 12:08:38 +0500
+  [1m[36mProductMaster Load (0.4ms)[0m  [1m[34mSELECT "product_masters".* FROM "product_masters"[0m
+Started GET "/api/v1/retailers" for ::1 at 2023-09-15 12:08:38 +0500
+  [1m[36mRetailer Load (0.2ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+Started GET "/api/v1/retailers" for ::1 at 2023-09-15 12:08:39 +0500
+  [1m[36mRetailer Load (0.4ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+Started GET "/api/v1/retailers" for ::1 at 2023-09-15 12:08:40 +0500
+  [1m[36mRetailer Load (0.3ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+Started GET "/api/v1/retailers/3" for ::1 at 2023-09-15 12:08:44 +0500
+  [1m[36mRetailer Load (0.7ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers" WHERE "retailers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:88:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/retailers/1" for ::1 at 2023-09-15 12:08:47 +0500
+  [1m[36mRetailer Load (0.4ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers" WHERE "retailers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:88:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/retailers" for ::1 at 2023-09-15 12:12:34 +0500
+  [1m[36mRetailer Load (0.6ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+Started GET "/api/v1/product_masters" for ::1 at 2023-09-15 12:12:35 +0500
+  [1m[36mProductMaster Load (0.3ms)[0m  [1m[34mSELECT "product_masters".* FROM "product_masters"[0m
+Started GET "/api/v1/product_categories" for ::1 at 2023-09-15 12:12:40 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/product_categories"):
+  
+Started GET "/api/v1/product_categories" for ::1 at 2023-09-15 12:12:49 +0500
+  [1m[36mProductCategory Load (2.4ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+Started GET "/api/v1/product_categories/3" for ::1 at 2023-09-15 12:13:48 +0500
+  [1m[36mProductCategory Load (0.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:122:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/product_categories/30" for ::1 at 2023-09-15 12:13:53 +0500
+  [1m[36mProductCategory Load (0.6ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:122:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/product_categories/3" for ::1 at 2023-09-15 12:13:55 +0500
+  [1m[36mProductCategory Load (0.4ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:122:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/product_masters" for ::1 at 2023-09-15 12:13:57 +0500
+  [1m[36mProductMaster Load (0.4ms)[0m  [1m[34mSELECT "product_masters".* FROM "product_masters"[0m
+Started GET "/api/v1/retailers" for ::1 at 2023-09-15 12:13:57 +0500
+  [1m[36mRetailer Load (0.2ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+Started GET "/api/v1/retailer_products" for ::1 at 2023-09-15 12:14:02 +0500
+  [1m[36mRetailerProduct Load (2.4ms)[0m  [1m[34mSELECT "retailer_products".* FROM "retailer_products"[0m
+Started GET "/api/v1/retailer_products/4" for ::1 at 2023-09-15 12:14:06 +0500
+  [1m[36mRetailerProduct Load (0.5ms)[0m  [1m[34mSELECT "retailer_products".* FROM "retailer_products" WHERE "retailer_products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:147:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/retailer_products/40" for ::1 at 2023-09-15 12:14:10 +0500
+  [1m[36mRetailerProduct Load (0.3ms)[0m  [1m[34mSELECT "retailer_products".* FROM "retailer_products" WHERE "retailer_products"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:147:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/brands" for ::1 at 2023-09-15 12:15:08 +0500
+  [1m[36mBrand Load (21.9ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+Started GET "/api/v1/retailer_products/40" for ::1 at 2023-09-15 12:16:39 +0500
+  [1m[36mRetailerProduct Load (7.4ms)[0m  [1m[34mSELECT "retailer_products".* FROM "retailer_products" WHERE "retailer_products"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:147:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/retailer_products/4" for ::1 at 2023-09-15 12:16:41 +0500
+  [1m[36mRetailerProduct Load (1.2ms)[0m  [1m[34mSELECT "retailer_products".* FROM "retailer_products" WHERE "retailer_products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:147:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/retailer_products" for ::1 at 2023-09-15 12:16:41 +0500
+  [1m[36mRetailerProduct Load (6.7ms)[0m  [1m[34mSELECT "retailer_products".* FROM "retailer_products"[0m
+Started GET "/api/v1/brands/4" for ::1 at 2023-09-15 12:17:34 +0500
+  [1m[36mBrand Load (1.6ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:46:in `block (3 levels) in <class:API>'
+Started GET "/api/v1/brands/400" for ::1 at 2023-09-15 12:19:52 +0500
+  [1m[36mBrand Load (1.6ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 400], ["LIMIT", 1]]
+  ↳ app/api/v1.rb:46:in `block (3 levels) in <class:API>'

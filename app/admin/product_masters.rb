@@ -25,4 +25,19 @@ ActiveAdmin.register ProductMaster do
     end
     f.actions
   end
+
+  # action_item :import_csv, only: :index do
+  #   link_to 'Import CSV', admin_product_master_csv_import_path
+  # end
+
+  # # Define a custom import action (similar to what you did for the Brand table)
+  # collection_action :csv_import, method: :post do
+  #   if params[:csv_file].present? && params[:csv_file].respond_to?(:tempfile)
+  #     file_path = params[:csv_file].tempfile.path
+  #     ProductMasterCsvImportWorker.perform_async(file_path)
+  #     redirect_to admin_product_masters_path, notice: 'CSV file was successfully queued for import.'
+  #   else
+  #     redirect_to admin_product_masters_path, alert: 'Please select a CSV file to import.'
+  #   end
+  # end
 end

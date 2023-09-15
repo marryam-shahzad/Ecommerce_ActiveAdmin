@@ -6,6 +6,7 @@ class CsvImportWorker
 
   def perform(file_path)
   	file_path = Rails.root.join('brands.csv')
+  	
     CSV.foreach(file_path, headers: true) do |row|
       # Add logic to process each row and create records as needed
       brand_name = row['name']

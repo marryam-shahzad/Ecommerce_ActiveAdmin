@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 #     end
 #   end
 # end
+# config/routes.rb
+mount V1::API => '/api/v1'
 
   namespace :admin do
     get 'csv_import', to: 'csv_import#index'

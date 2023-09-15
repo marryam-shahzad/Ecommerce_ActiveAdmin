@@ -47,6 +47,8 @@ gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+gem 'grape', "~> 1.8"# Use the appropriate version
+# gem 'grape-generator'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -57,6 +59,11 @@ group :development, :test do
   gem 'sidekiq'
   gem "faker"
   gem "csv"
+  # Gemfile
+# gem 'grape'
+
+# Gemfile
+
 
 end
 
@@ -78,3 +85,5 @@ group :test do
   gem "selenium-webdriver"
 
 end
+
+# gem "grape-generator", "~> 0.1.3"
