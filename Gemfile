@@ -47,7 +47,15 @@ gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
-gem 'grape', "~> 1.8"# Use the appropriate version
+gem 'jwt'
+
+gem 'grape', "~> 1.8"
+# gem 'grape-entity'
+# gem 'grape-jwt'# Use the appropriate version
+gem 'grape-entity'
+# gem 'grape-jwt-authentication', '~> 2.2'
+
+
 # gem 'grape-generator'
 
 group :development, :test do
@@ -61,6 +69,8 @@ group :development, :test do
   gem "csv"
   # Gemfile
 # gem 'grape'
+gem 'grape-jwt-authentication'
+
 
 # Gemfile
 
@@ -70,6 +80,11 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  # gem 'graphql'
+  gem 'graphql', '~> 2.1.0'
+gem 'graphiql-rails'
+
+
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"

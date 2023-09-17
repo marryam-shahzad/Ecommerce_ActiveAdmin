@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  # if Rails.env.development?
+  #   mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
+  # end
+  # post "/graphql", to: "graphql#execute"
+
+  post '/graphql', to: 'graphql#execute'
+  if Rails.env.development?
+    mount GraphiQL::Rails::Engine, at: '/graphiql', graphql_path: '/graphql'
+  end
+
   # devise_for :admin_users
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -19,6 +29,7 @@ Rails.application.routes.draw do
 # end
 # config/routes.rb
 mount V1::API => '/api/v1'
+
 
   namespace :admin do
     get 'csv_import', to: 'csv_import#index'

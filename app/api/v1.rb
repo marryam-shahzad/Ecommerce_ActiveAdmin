@@ -1,13 +1,30 @@
 module V1
   class API < Grape::API
+    # include Grape::API::Helpers
+    # include ::GrapeJwt::Authentication
+    
     format :json
 
+
+# helpers do
+#       def authenticate!
+#         user_id = JWT.decode(token, Rails.application.config.jwt_secret, true, algorithm: 'HS256')[0]['user_id']
+#         @current_user = User.find(user_id)
+#       rescue JWT::DecodeError
+#         error!('Invalid token', 401)
+#       end
+
+#       def current_user
+#         @current_user
+#       end
+#     end
 
 
 # PRODUCT MASTERS
     resource :product_masters do
       desc 'Get a list of products'
       get do
+          # authenticate!
         ProductMaster.all
       end
 
@@ -154,6 +171,33 @@ module V1
         end
       end
     end
+
+
+
+
+
+
+# resource :auth do
+#       desc 'Authenticate and get JWT token'
+#       params do
+#         requires :username, type: String
+#         requires :password, type: String
+#       end
+#       post 'login' do
+#         # Authenticate user (e.g., check credentials)
+#         authenticated_user = User.find_by(username: params[:username], password: params[:password])
+
+#         if authenticated_user
+#           jwt_token = GrapeJwt::Token.generate(sub: authenticated_user.id)
+#           { token: jwt_token }
+#         else
+#           error!('Authentication failed', 401)
+#         end
+#       end
+#     end
+
+
+
 
   end
 end

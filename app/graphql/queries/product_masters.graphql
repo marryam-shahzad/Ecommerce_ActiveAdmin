@@ -1,0 +1,8 @@
+query {
+  product_masters {
+    id
+    name
+    description
+    price
+  }
+}
