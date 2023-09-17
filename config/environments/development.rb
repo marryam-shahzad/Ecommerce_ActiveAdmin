@@ -16,7 +16,7 @@ Rails.application.configure do
 
   # Enable server timing
   config.server_timing = true
-  config.jwt_secret = 'my_secret_key'
+  # config.jwt_secret = 'my_secret_key'
 
 
   # Enable/disable caching. By default caching is disabled.

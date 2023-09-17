@@ -17032,3 +17032,1788 @@ Processing by GraphqlController#execute as */*
 Completed 200 OK in 32ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 13331)
 
 
+Started GET "/" for ::1 at 2023-09-17 13:38:30 +0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.2ms | Allocations: 460)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 1603)
+
+
+Started GET "/account" for ::1 at 2023-09-17 13:38:31 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/account"):
+  
+Started GET "/admin" for ::1 at 2023-09-17 13:38:31 +0500
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 531)
+
+
+Started GET "/admin/login" for ::1 at 2023-09-17 13:38:31 +0500
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering layout /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/layouts/active_admin_logged_out.html.erb
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/devise/shared/_links.erb (Duration: 0.8ms | Allocations: 1038)
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 11.5ms | Allocations: 12175)
+  Rendered layout /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/layouts/active_admin_logged_out.html.erb (Duration: 18.4ms | Allocations: 25457)
+Completed 200 OK in 30ms (Views: 19.6ms | ActiveRecord: 4.3ms | Allocations: 43279)
+
+
+Started POST "/admin/login" for ::1 at 2023-09-17 13:38:48 +0500
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (3.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin
+Completed 303 See Other in 303ms (ActiveRecord: 3.4ms | Allocations: 7015)
+
+
+Started GET "/admin" for ::1 at 2023-09-17 13:38:48 +0500
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb (Duration: 9.8ms | Allocations: 18796)
+Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 0.3ms | Allocations: 21909)
+
+
+Started GET "/admin/csv_import" for ::1 at 2023-09-17 13:38:50 +0500
+Processing by Admin::CsvImportController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb
+  Rendered admin/csv_import/_form.html.erb (Duration: 0.6ms | Allocations: 553)
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb (Duration: 9.1ms | Allocations: 17969)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.3ms | Allocations: 19921)
+
+
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 13:38:55 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x0000000107c70e18 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-1023-a31hup.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 2336)
+
+
+  
+ArgumentError (Your Redis configuration uses the namespace 'Ecommerce_ActiveAdmin' but this feature isn't supported by redis-client. Either use the redis adapter or remove the namespace.):
+  
+app/admin/product_masters_csv_import.rb:11:in `block (2 levels) in <main>'
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 13:40:26 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x000000010b12b298 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-1023-39oz5z.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms | Allocations: 1889)
+
+
+  
+ArgumentError (Your Redis configuration uses the namespace 'Ecommerce_ActiveAdmin' but this feature isn't supported by redis-client. Either use the redis adapter or remove the namespace.):
+  
+app/admin/product_masters_csv_import.rb:11:in `block (2 levels) in <main>'
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 13:41:22 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x000000010be06af8 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-1023-h8h7uq.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 17.1ms | Allocations: 8348)
+
+
+  
+Zeitwerk::NameError (expected file /Users/marryamshahzad/Documents/rails_project/Ecommerce_ActiveAdmin/app/workers/product_master_csv_import_worker.rb to define constant ProductMasterCsvImportWorker, but didn't):
+  
+app/admin/product_masters_csv_import.rb:11:in `block (2 levels) in <main>'
+Started GET "/admin/brands" for ::1 at 2023-09-17 13:41:34 +0500
+Processing by Admin::BrandsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb
+  [1m[36mBrand Load (2.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands" ORDER BY "brands"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBrand Count (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "brands"[0m
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb (Duration: 74.1ms | Allocations: 81226)
+Completed 200 OK in 90ms (Views: 71.2ms | ActiveRecord: 9.6ms | Allocations: 85335)
+
+
+Started GET "/admin/csv_import" for ::1 at 2023-09-17 13:41:36 +0500
+Processing by Admin::CsvImportController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb
+  Rendered admin/csv_import/_form.html.erb (Duration: 0.4ms | Allocations: 348)
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb (Duration: 16.0ms | Allocations: 17347)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.2ms | Allocations: 19316)
+
+
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 13:41:43 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x000000012ff873e0 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-1023-fuo3a5.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms | Allocations: 3778)
+
+
+  
+NameError (uninitialized constant ProductMasterCsvImportWorker
+Did you mean?  ProductMastersController):
+  
+app/admin/product_masters_csv_import.rb:11:in `block (2 levels) in <main>'
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 13:42:57 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x000000010b572518 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-1023-6unnbf.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 5.4ms | Allocations: 8662)
+
+
+  
+ArgumentError (Your Redis configuration uses the namespace 'Ecommerce_ActiveAdmin' but this feature isn't supported by redis-client. Either use the redis adapter or remove the namespace.):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 13:44:08 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x000000010a2ab510 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-1023-s27xpy.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 1882)
+
+
+  
+ArgumentError (Your Redis configuration uses the namespace 'Ecommerce_ActiveAdmin' but this feature isn't supported by redis-client. Either use the redis adapter or remove the namespace.):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 13:52:50 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x000000010a5d9610 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-1023-tyx17.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 20.3ms | Allocations: 4807)
+
+
+  
+ArgumentError (Your Redis configuration uses the namespace 'Ecommerce_ActiveAdmin' but this feature isn't supported by redis-client. Either use the redis adapter or remove the namespace.):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 13:52:52 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x00000001078e7a08 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-1023-utfxjx.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms | Allocations: 1880)
+
+
+  
+ArgumentError (Your Redis configuration uses the namespace 'Ecommerce_ActiveAdmin' but this feature isn't supported by redis-client. Either use the redis adapter or remove the namespace.):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 13:53:11 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x000000014b2efd50 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-1023-5ng1vx.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.6ms | Allocations: 1880)
+
+
+  
+ArgumentError (Your Redis configuration uses the namespace 'Ecommerce_ActiveAdmin' but this feature isn't supported by redis-client. Either use the redis adapter or remove the namespace.):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started GET "/admin/csv_import/import" for ::1 at 2023-09-17 14:31:47 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/admin/csv_import/import"):
+  
+Started GET "/admin/csv_import" for ::1 at 2023-09-17 14:31:52 +0500
+Processing by Admin::CsvImportController#index as HTML
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb
+  Rendered admin/csv_import/_form.html.erb (Duration: 0.7ms | Allocations: 588)
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb (Duration: 94.3ms | Allocations: 88615)
+Completed 200 OK in 140ms (Views: 95.7ms | ActiveRecord: 7.0ms | Allocations: 113391)
+
+
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 14:31:58 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x0000000137d7aba8 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-3249-1fkj1q.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.6ms | Allocations: 2263)
+
+
+  
+ArgumentError (Your Redis configuration uses the namespace 'Ecommerce_ActiveAdmin' but this feature isn't supported by redis-client. Either use the redis adapter or remove the namespace.):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 14:32:25 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x0000000114505ae0 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-3249-8es9tf.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms | Allocations: 1891)
+
+
+  
+ArgumentError (Your Redis configuration uses the namespace 'Ecommerce_ActiveAdmin' but this feature isn't supported by redis-client. Either use the redis adapter or remove the namespace.):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started GET "/admin/csv_import/import" for ::1 at 2023-09-17 14:32:28 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/admin/csv_import/import"):
+  
+Started GET "/admin/csv_import/" for ::1 at 2023-09-17 14:32:32 +0500
+Processing by Admin::CsvImportController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb
+  Rendered admin/csv_import/_form.html.erb (Duration: 0.3ms | Allocations: 323)
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb (Duration: 15.3ms | Allocations: 17338)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.4ms | Allocations: 18846)
+
+
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 14:32:35 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x0000000113df3928 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-3249-sm1g6.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms | Allocations: 1880)
+
+
+  
+ArgumentError (Your Redis configuration uses the namespace 'Ecommerce_ActiveAdmin' but this feature isn't supported by redis-client. Either use the redis adapter or remove the namespace.):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 14:33:27 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x00000001144efa88 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-3249-k5zz11.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 6.4ms | Allocations: 8627)
+
+
+  
+ArgumentError (Your Redis configuration uses the namespace 'Ecommerce_ActiveAdmin' but this feature isn't supported by redis-client. Either use the redis adapter or remove the namespace.):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 14:33:28 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x0000000115b18bc0 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-3249-hel2uu.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 1882)
+
+
+  
+ArgumentError (Your Redis configuration uses the namespace 'Ecommerce_ActiveAdmin' but this feature isn't supported by redis-client. Either use the redis adapter or remove the namespace.):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started GET "/admin/csv_import/import" for ::1 at 2023-09-17 14:34:01 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/admin/csv_import/import"):
+  
+Started GET "/admin/csv_import/" for ::1 at 2023-09-17 14:34:02 +0500
+Processing by Admin::CsvImportController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb
+  Rendered admin/csv_import/_form.html.erb (Duration: 0.3ms | Allocations: 348)
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb (Duration: 16.2ms | Allocations: 18269)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.2ms | Allocations: 20223)
+
+
+Started GET "/admin/csv_import" for ::1 at 2023-09-17 14:34:02 +0500
+Processing by Admin::CsvImportController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb
+  Rendered admin/csv_import/_form.html.erb (Duration: 0.2ms | Allocations: 323)
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb (Duration: 16.1ms | Allocations: 17191)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.2ms | Allocations: 18707)
+
+
+Started GET "/admin/csv_import" for ::1 at 2023-09-17 14:36:34 +0500
+Processing by Admin::CsvImportController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb
+  Rendered admin/csv_import/_form.html.erb (Duration: 0.3ms | Allocations: 323)
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb (Duration: 15.5ms | Allocations: 17336)
+Completed 200 OK in 20ms (Views: 16.0ms | ActiveRecord: 0.3ms | Allocations: 18860)
+
+
+Started GET "/admin/csv_import" for ::1 at 2023-09-17 14:37:41 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::CsvImportController#index as HTML
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb
+  Rendered admin/csv_import/_form.html.erb (Duration: 0.6ms | Allocations: 660)
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb (Duration: 105.8ms | Allocations: 88715)
+Completed 200 OK in 123ms (Views: 109.5ms | ActiveRecord: 3.6ms | Allocations: 115387)
+
+
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 14:37:46 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x000000011a1767e8 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-3719-pp8rpn.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.6ms | Allocations: 2275)
+
+
+  
+ArgumentError (Your Redis configuration uses the namespace 'Ecommerce_ActiveAdmin' but this feature isn't supported by redis-client. Either use the redis adapter or remove the namespace.):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started GET "/brands/new" for ::1 at 2023-09-17 14:41:09 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BrandsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/_form.html.erb (Duration: 3.4ms | Allocations: 2214)
+  Rendered brands/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2814)
+  Rendered layout layouts/application.html.erb (Duration: 217.9ms | Allocations: 94421)
+Completed 200 OK in 237ms (Views: 220.1ms | ActiveRecord: 9.2ms | Allocations: 114860)
+
+
+Started GET "/admin/csv_import/import" for ::1 at 2023-09-17 14:43:57 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/admin/csv_import/import"):
+  
+Started GET "/admin/csv_import/" for ::1 at 2023-09-17 14:43:58 +0500
+Processing by Admin::CsvImportController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 511)
+
+
+Started GET "/admin/login" for ::1 at 2023-09-17 14:43:58 +0500
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering layout /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/layouts/active_admin_logged_out.html.erb
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/devise/shared/_links.erb (Duration: 0.9ms | Allocations: 1038)
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 10.3ms | Allocations: 11008)
+  Rendered layout /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/layouts/active_admin_logged_out.html.erb (Duration: 19.0ms | Allocations: 23690)
+Completed 200 OK in 33ms (Views: 20.6ms | ActiveRecord: 5.7ms | Allocations: 41234)
+
+
+Started POST "/admin/login" for ::1 at 2023-09-17 14:44:07 +0500
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (3.9ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/csv_import
+Completed 303 See Other in 275ms (ActiveRecord: 4.2ms | Allocations: 6275)
+
+
+Started GET "/admin/csv_import" for ::1 at 2023-09-17 14:44:08 +0500
+Processing by Admin::CsvImportController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb
+  Rendered admin/csv_import/_form.html.erb (Duration: 0.5ms | Allocations: 552)
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb (Duration: 8.6ms | Allocations: 19355)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 22208)
+
+
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 14:44:12 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x00000001234aa7f8 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-1032-71ptk6.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms | Allocations: 2255)
+
+
+  
+ArgumentError (Your Redis configuration uses the namespace 'Ecommerce_ActiveAdmin' but this feature isn't supported by redis-client. Either use the redis adapter or remove the namespace.):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started GET "/admin/csv_import/import" for ::1 at 2023-09-17 14:54:17 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (11.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/admin/csv_import/import"):
+  
+Started GET "/admin/csv_import/import" for ::1 at 2023-09-17 14:54:18 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/admin/csv_import/import"):
+  
+Started GET "/admin/csv_import" for ::1 at 2023-09-17 14:54:21 +0500
+Processing by Admin::CsvImportController#index as HTML
+  [1m[36mAdminUser Load (0.9ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb
+  Rendered admin/csv_import/_form.html.erb (Duration: 0.6ms | Allocations: 587)
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb (Duration: 98.0ms | Allocations: 88637)
+Completed 200 OK in 128ms (Views: 100.0ms | ActiveRecord: 9.4ms | Allocations: 113410)
+
+
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 14:54:26 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x0000000107be90a8 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-2301-k03a6e.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms | Allocations: 2240)
+
+
+  
+TypeError (no _dump_data is defined for class Monitor):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 14:54:52 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x00000001391f9868 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-2301-pmnq2u.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 6.2ms | Allocations: 8611)
+
+
+  
+TypeError (no _dump_data is defined for class Monitor):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 14:54:54 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x0000000107a38920 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-2301-7bmxz.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms | Allocations: 1874)
+
+
+  
+TypeError (no _dump_data is defined for class Monitor):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 14:55:24 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x0000000118ff4538 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-2301-him07g.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 6.0ms | Allocations: 8557)
+
+
+  
+TypeError (no _dump_data is defined for class Monitor):
+  
+app/admin/csv_import.rb:12:in `block (2 levels) in <main>'
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 14:56:54 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x000000013b066030 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-2301-vg8cme.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 5.4ms | Allocations: 8594)
+
+
+  
+TypeError (no _dump_data is defined for class Monitor):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 15:00:20 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x00000001181e7a58 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-2301-lhn741.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms | Allocations: 1862)
+
+
+  
+TypeError (no _dump_data is defined for class Monitor):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 15:00:22 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x00000001189d5d78 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-2301-e63f78.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms | Allocations: 1862)
+
+
+  
+TypeError (no _dump_data is defined for class Monitor):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 15:02:03 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x000000011a8ac6e8 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-2301-kicj83.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 1862)
+
+
+  
+TypeError (no _dump_data is defined for class Monitor):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 15:02:06 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x000000011a210988 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-2301-nolg7a.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 1862)
+
+
+  
+TypeError (no _dump_data is defined for class Monitor):
+  
+app/admin/csv_import.rb:11:in `block (2 levels) in <main>'
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 15:03:08 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x0000000121175df0 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-2701-jhpnkz.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/brands
+Completed 302 Found in 31ms (ActiveRecord: 18.5ms | Allocations: 24817)
+
+
+Started GET "/admin/brands" for ::1 at 2023-09-17 15:03:09 +0500
+Processing by Admin::BrandsController#index as HTML
+  [1m[36mAdminUser Load (0.7ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb
+  [1m[36mBrand Load (2.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands" ORDER BY "brands"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBrand Count (3.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "brands"[0m
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb (Duration: 132.3ms | Allocations: 163631)
+Completed 200 OK in 151ms (Views: 133.9ms | ActiveRecord: 9.9ms | Allocations: 169853)
+
+
+Started GET "/admin/brands" for ::1 at 2023-09-17 15:04:00 +0500
+Processing by Admin::BrandsController#index as HTML
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT "brands".* FROM "brands" ORDER BY "brands"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBrand Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "brands"[0m
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb (Duration: 40.6ms | Allocations: 72824)
+Completed 200 OK in 47ms (Views: 40.1ms | ActiveRecord: 1.7ms | Allocations: 74672)
+
+
+Started GET "/admin/brands" for ::1 at 2023-09-17 15:04:01 +0500
+Processing by Admin::BrandsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT "brands".* FROM "brands" ORDER BY "brands"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBrand Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "brands"[0m
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb (Duration: 46.1ms | Allocations: 72819)
+Completed 200 OK in 51ms (Views: 45.6ms | ActiveRecord: 1.4ms | Allocations: 74669)
+
+
+Started GET "/admin/brands" for ::1 at 2023-09-17 15:05:02 +0500
+Processing by Admin::BrandsController#index as HTML
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT "brands".* FROM "brands" ORDER BY "brands"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBrand Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "brands"[0m
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb (Duration: 40.0ms | Allocations: 72960)
+Completed 200 OK in 45ms (Views: 39.5ms | ActiveRecord: 1.5ms | Allocations: 74784)
+
+
+Started GET "/admin/brands" for ::1 at 2023-09-17 15:05:03 +0500
+Processing by Admin::BrandsController#index as HTML
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT "brands".* FROM "brands" ORDER BY "brands"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBrand Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "brands"[0m
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb (Duration: 42.8ms | Allocations: 72821)
+Completed 200 OK in 47ms (Views: 42.1ms | ActiveRecord: 1.6ms | Allocations: 74671)
+
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (6.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Gislason, Stamm and Wehner"], ["created_at", "2023-09-17 10:05:08.328778"], ["updated_at", "2023-09-17 10:05:08.328778"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kertzmann LLC"], ["created_at", "2023-09-17 10:05:08.339445"], ["updated_at", "2023-09-17 10:05:08.339445"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Miller-Gerlach"], ["created_at", "2023-09-17 10:05:08.340504"], ["updated_at", "2023-09-17 10:05:08.340504"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Maggio, Deckow and Connelly"], ["created_at", "2023-09-17 10:05:08.341480"], ["updated_at", "2023-09-17 10:05:08.341480"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bode Inc"], ["created_at", "2023-09-17 10:05:08.342430"], ["updated_at", "2023-09-17 10:05:08.342430"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Klein Group"], ["created_at", "2023-09-17 10:05:08.343346"], ["updated_at", "2023-09-17 10:05:08.343346"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Walker-Schiller"], ["created_at", "2023-09-17 10:05:08.344250"], ["updated_at", "2023-09-17 10:05:08.344250"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hettinger Group"], ["created_at", "2023-09-17 10:05:08.345157"], ["updated_at", "2023-09-17 10:05:08.345157"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Toy-Wunsch"], ["created_at", "2023-09-17 10:05:08.346062"], ["updated_at", "2023-09-17 10:05:08.346062"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Vandervort LLC"], ["created_at", "2023-09-17 10:05:08.347009"], ["updated_at", "2023-09-17 10:05:08.347009"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kuhlman-Hoppe"], ["created_at", "2023-09-17 10:05:08.348017"], ["updated_at", "2023-09-17 10:05:08.348017"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Wilkinson Inc"], ["created_at", "2023-09-17 10:05:08.349168"], ["updated_at", "2023-09-17 10:05:08.349168"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Nader, Powlowski and Purdy"], ["created_at", "2023-09-17 10:05:08.350203"], ["updated_at", "2023-09-17 10:05:08.350203"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Zemlak-Mohr"], ["created_at", "2023-09-17 10:05:08.351160"], ["updated_at", "2023-09-17 10:05:08.351160"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Strosin-Tremblay"], ["created_at", "2023-09-17 10:05:08.352313"], ["updated_at", "2023-09-17 10:05:08.352313"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Nikolaus, Rowe and Schinner"], ["created_at", "2023-09-17 10:05:08.353258"], ["updated_at", "2023-09-17 10:05:08.353258"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Swaniawski, Satterfield and Hyatt"], ["created_at", "2023-09-17 10:05:08.354219"], ["updated_at", "2023-09-17 10:05:08.354219"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ortiz-Jaskolski"], ["created_at", "2023-09-17 10:05:08.355218"], ["updated_at", "2023-09-17 10:05:08.355218"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "O'Keefe, Lehner and Reichert"], ["created_at", "2023-09-17 10:05:08.356203"], ["updated_at", "2023-09-17 10:05:08.356203"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Parker and Sons"], ["created_at", "2023-09-17 10:05:08.357200"], ["updated_at", "2023-09-17 10:05:08.357200"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Wilderman LLC"], ["created_at", "2023-09-17 10:05:08.358241"], ["updated_at", "2023-09-17 10:05:08.358241"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Boyer and Sons"], ["created_at", "2023-09-17 10:05:08.359273"], ["updated_at", "2023-09-17 10:05:08.359273"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Blanda-Windler"], ["created_at", "2023-09-17 10:05:08.360317"], ["updated_at", "2023-09-17 10:05:08.360317"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mayert LLC"], ["created_at", "2023-09-17 10:05:08.361359"], ["updated_at", "2023-09-17 10:05:08.361359"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.3ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ruecker, Powlowski and Stehr"], ["created_at", "2023-09-17 10:05:08.362404"], ["updated_at", "2023-09-17 10:05:08.362404"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Boyer-Cruickshank"], ["created_at", "2023-09-17 10:05:08.363638"], ["updated_at", "2023-09-17 10:05:08.363638"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Paucek and Sons"], ["created_at", "2023-09-17 10:05:08.364835"], ["updated_at", "2023-09-17 10:05:08.364835"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bayer, Kautzer and Kulas"], ["created_at", "2023-09-17 10:05:08.365882"], ["updated_at", "2023-09-17 10:05:08.365882"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Rau, Okuneva and Price"], ["created_at", "2023-09-17 10:05:08.366914"], ["updated_at", "2023-09-17 10:05:08.366914"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Yundt, Grant and Stamm"], ["created_at", "2023-09-17 10:05:08.367971"], ["updated_at", "2023-09-17 10:05:08.367971"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Rau, Stark and Mohr"], ["created_at", "2023-09-17 10:05:08.369012"], ["updated_at", "2023-09-17 10:05:08.369012"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bosco and Sons"], ["created_at", "2023-09-17 10:05:08.370064"], ["updated_at", "2023-09-17 10:05:08.370064"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Goldner, Will and Kris"], ["created_at", "2023-09-17 10:05:08.371094"], ["updated_at", "2023-09-17 10:05:08.371094"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Walter, Emmerich and Mills"], ["created_at", "2023-09-17 10:05:08.372135"], ["updated_at", "2023-09-17 10:05:08.372135"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mante-Gislason"], ["created_at", "2023-09-17 10:05:08.373152"], ["updated_at", "2023-09-17 10:05:08.373152"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Nikolaus LLC"], ["created_at", "2023-09-17 10:05:08.374193"], ["updated_at", "2023-09-17 10:05:08.374193"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Huel, O'Conner and Jacobson"], ["created_at", "2023-09-17 10:05:08.375305"], ["updated_at", "2023-09-17 10:05:08.375305"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Harber, Shanahan and Corkery"], ["created_at", "2023-09-17 10:05:08.376373"], ["updated_at", "2023-09-17 10:05:08.376373"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Moore, Block and Pollich"], ["created_at", "2023-09-17 10:05:08.377443"], ["updated_at", "2023-09-17 10:05:08.377443"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hackett-Pfeffer"], ["created_at", "2023-09-17 10:05:08.378474"], ["updated_at", "2023-09-17 10:05:08.378474"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Gottlieb, Will and Prosacco"], ["created_at", "2023-09-17 10:05:08.379517"], ["updated_at", "2023-09-17 10:05:08.379517"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.4ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cassin-Mayer"], ["created_at", "2023-09-17 10:05:08.380649"], ["updated_at", "2023-09-17 10:05:08.380649"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lowe, Cassin and Kulas"], ["created_at", "2023-09-17 10:05:08.381884"], ["updated_at", "2023-09-17 10:05:08.381884"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kerluke-King"], ["created_at", "2023-09-17 10:05:08.382983"], ["updated_at", "2023-09-17 10:05:08.382983"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Stiedemann, Tillman and Skiles"], ["created_at", "2023-09-17 10:05:08.383980"], ["updated_at", "2023-09-17 10:05:08.383980"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bernier Group"], ["created_at", "2023-09-17 10:05:08.384957"], ["updated_at", "2023-09-17 10:05:08.384957"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kuhic LLC"], ["created_at", "2023-09-17 10:05:08.385949"], ["updated_at", "2023-09-17 10:05:08.385949"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Schinner, Schultz and Marquardt"], ["created_at", "2023-09-17 10:05:08.386982"], ["updated_at", "2023-09-17 10:05:08.386982"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Huels Inc"], ["created_at", "2023-09-17 10:05:08.388040"], ["updated_at", "2023-09-17 10:05:08.388040"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "O'Connell-Ritchie"], ["created_at", "2023-09-17 10:05:08.388948"], ["updated_at", "2023-09-17 10:05:08.388948"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Rath, Kautzer and Nicolas"], ["created_at", "2023-09-17 10:05:08.390045"], ["updated_at", "2023-09-17 10:05:08.390045"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Towne Group"], ["created_at", "2023-09-17 10:05:08.391124"], ["updated_at", "2023-09-17 10:05:08.391124"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Yundt, Barrows and McGlynn"], ["created_at", "2023-09-17 10:05:08.392175"], ["updated_at", "2023-09-17 10:05:08.392175"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hermiston Inc"], ["created_at", "2023-09-17 10:05:08.393247"], ["updated_at", "2023-09-17 10:05:08.393247"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Windler-Gottlieb"], ["created_at", "2023-09-17 10:05:08.394284"], ["updated_at", "2023-09-17 10:05:08.394284"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mosciski-Barrows"], ["created_at", "2023-09-17 10:05:08.395318"], ["updated_at", "2023-09-17 10:05:08.395318"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bayer Group"], ["created_at", "2023-09-17 10:05:08.396476"], ["updated_at", "2023-09-17 10:05:08.396476"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.6ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Douglas, Grant and Wiegand"], ["created_at", "2023-09-17 10:05:08.397473"], ["updated_at", "2023-09-17 10:05:08.397473"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Gerlach LLC"], ["created_at", "2023-09-17 10:05:08.398910"], ["updated_at", "2023-09-17 10:05:08.398910"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Klocko and Sons"], ["created_at", "2023-09-17 10:05:08.400040"], ["updated_at", "2023-09-17 10:05:08.400040"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lindgren and Sons"], ["created_at", "2023-09-17 10:05:08.401098"], ["updated_at", "2023-09-17 10:05:08.401098"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Runolfsdottir, Tromp and Quitzon"], ["created_at", "2023-09-17 10:05:08.402137"], ["updated_at", "2023-09-17 10:05:08.402137"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ward-Zboncak"], ["created_at", "2023-09-17 10:05:08.403159"], ["updated_at", "2023-09-17 10:05:08.403159"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Schultz-Bogan"], ["created_at", "2023-09-17 10:05:08.404193"], ["updated_at", "2023-09-17 10:05:08.404193"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Larkin-Abernathy"], ["created_at", "2023-09-17 10:05:08.405203"], ["updated_at", "2023-09-17 10:05:08.405203"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cartwright LLC"], ["created_at", "2023-09-17 10:05:08.406205"], ["updated_at", "2023-09-17 10:05:08.406205"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hoeger, Dietrich and Yundt"], ["created_at", "2023-09-17 10:05:08.407193"], ["updated_at", "2023-09-17 10:05:08.407193"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Jones, Wintheiser and Windler"], ["created_at", "2023-09-17 10:05:08.408237"], ["updated_at", "2023-09-17 10:05:08.408237"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Walsh Group"], ["created_at", "2023-09-17 10:05:08.409241"], ["updated_at", "2023-09-17 10:05:08.409241"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lowe-Rogahn"], ["created_at", "2023-09-17 10:05:08.410264"], ["updated_at", "2023-09-17 10:05:08.410264"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cruickshank and Sons"], ["created_at", "2023-09-17 10:05:08.411282"], ["updated_at", "2023-09-17 10:05:08.411282"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Moore Group"], ["created_at", "2023-09-17 10:05:08.412280"], ["updated_at", "2023-09-17 10:05:08.412280"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "VonRueden, Rohan and Bins"], ["created_at", "2023-09-17 10:05:08.413341"], ["updated_at", "2023-09-17 10:05:08.413341"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.4ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Witting-Greenholt"], ["created_at", "2023-09-17 10:05:08.414319"], ["updated_at", "2023-09-17 10:05:08.414319"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Carroll LLC"], ["created_at", "2023-09-17 10:05:08.415565"], ["updated_at", "2023-09-17 10:05:08.415565"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Doyle, Lebsack and Koelpin"], ["created_at", "2023-09-17 10:05:08.416606"], ["updated_at", "2023-09-17 10:05:08.416606"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Stark-Leffler"], ["created_at", "2023-09-17 10:05:08.417615"], ["updated_at", "2023-09-17 10:05:08.417615"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Barrows, Bruen and Lebsack"], ["created_at", "2023-09-17 10:05:08.418624"], ["updated_at", "2023-09-17 10:05:08.418624"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Predovic, Brekke and Auer"], ["created_at", "2023-09-17 10:05:08.419645"], ["updated_at", "2023-09-17 10:05:08.419645"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Schumm Inc"], ["created_at", "2023-09-17 10:05:08.420643"], ["updated_at", "2023-09-17 10:05:08.420643"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "West Group"], ["created_at", "2023-09-17 10:05:08.422051"], ["updated_at", "2023-09-17 10:05:08.422051"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hegmann-Mertz"], ["created_at", "2023-09-17 10:05:08.423078"], ["updated_at", "2023-09-17 10:05:08.423078"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Deckow-Breitenberg"], ["created_at", "2023-09-17 10:05:08.424065"], ["updated_at", "2023-09-17 10:05:08.424065"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "O'Connell Group"], ["created_at", "2023-09-17 10:05:08.425065"], ["updated_at", "2023-09-17 10:05:08.425065"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Nolan Inc"], ["created_at", "2023-09-17 10:05:08.426061"], ["updated_at", "2023-09-17 10:05:08.426061"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Wisozk-Luettgen"], ["created_at", "2023-09-17 10:05:08.427043"], ["updated_at", "2023-09-17 10:05:08.427043"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cronin, Koelpin and Greenfelder"], ["created_at", "2023-09-17 10:05:08.428040"], ["updated_at", "2023-09-17 10:05:08.428040"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Larkin-Nader"], ["created_at", "2023-09-17 10:05:08.429002"], ["updated_at", "2023-09-17 10:05:08.429002"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sauer Group"], ["created_at", "2023-09-17 10:05:08.429978"], ["updated_at", "2023-09-17 10:05:08.429978"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Boyle, VonRueden and Wintheiser"], ["created_at", "2023-09-17 10:05:08.431006"], ["updated_at", "2023-09-17 10:05:08.431006"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "D'Amore and Sons"], ["created_at", "2023-09-17 10:05:08.432069"], ["updated_at", "2023-09-17 10:05:08.432069"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (11.3ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mohr-Pouros"], ["created_at", "2023-09-17 10:05:08.433109"], ["updated_at", "2023-09-17 10:05:08.433109"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ruecker, Renner and Cormier"], ["created_at", "2023-09-17 10:05:08.445620"], ["updated_at", "2023-09-17 10:05:08.445620"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Carroll Inc"], ["created_at", "2023-09-17 10:05:08.446675"], ["updated_at", "2023-09-17 10:05:08.446675"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Abbott Inc"], ["created_at", "2023-09-17 10:05:08.447699"], ["updated_at", "2023-09-17 10:05:08.447699"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Feeney-Kautzer"], ["created_at", "2023-09-17 10:05:08.448821"], ["updated_at", "2023-09-17 10:05:08.448821"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Flatley-Heidenreich"], ["created_at", "2023-09-17 10:05:08.449869"], ["updated_at", "2023-09-17 10:05:08.449869"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Grant, Fay and Lynch"], ["created_at", "2023-09-17 10:05:08.450887"], ["updated_at", "2023-09-17 10:05:08.450887"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pagac-Maggio"], ["created_at", "2023-09-17 10:05:08.451897"], ["updated_at", "2023-09-17 10:05:08.451897"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Morissette Inc"], ["created_at", "2023-09-17 10:05:08.452919"], ["updated_at", "2023-09-17 10:05:08.452919"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+Started GET "/admin/brands" for ::1 at 2023-09-17 15:05:12 +0500
+Processing by Admin::BrandsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT "brands".* FROM "brands" ORDER BY "brands"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBrand Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "brands"[0m
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb (Duration: 63.9ms | Allocations: 72950)
+Completed 200 OK in 69ms (Views: 63.2ms | ActiveRecord: 1.6ms | Allocations: 74765)
+
+
+Started GET "/admin/csv_import" for ::1 at 2023-09-17 15:05:47 +0500
+Processing by Admin::CsvImportController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb
+  Rendered admin/csv_import/_form.html.erb (Duration: 2.4ms | Allocations: 554)
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/page/index.html.arb (Duration: 48.2ms | Allocations: 18144)
+Completed 200 OK in 56ms (Views: 50.7ms | ActiveRecord: 0.2ms | Allocations: 20179)
+
+
+Started POST "/admin/csv_import/import" for ::1 at 2023-09-17 15:05:51 +0500
+Processing by Admin::CsvImportController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x0000000111fed690 @tempfile=#<Tempfile:/var/folders/hx/pgx4x9b55hz5ms7jhsqyd5vh0000gn/T/RackMultipart20230917-2701-ke6qxv.csv>, @content_type="text/csv", @original_filename="brands.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"brands.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Import CSV"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/brands
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 2379)
+
+
+Started GET "/admin/brands" for ::1 at 2023-09-17 15:05:52 +0500
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.3ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Gislason, Stamm and Wehner"], ["created_at", "2023-09-17 10:05:52.015098"], ["updated_at", "2023-09-17 10:05:52.015098"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kertzmann LLC"], ["created_at", "2023-09-17 10:05:52.017619"], ["updated_at", "2023-09-17 10:05:52.017619"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Miller-Gerlach"], ["created_at", "2023-09-17 10:05:52.019182"], ["updated_at", "2023-09-17 10:05:52.019182"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Admin::BrandsController#index as HTML
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Maggio, Deckow and Connelly"], ["created_at", "2023-09-17 10:05:52.020631"], ["updated_at", "2023-09-17 10:05:52.020631"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.3ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bode Inc"], ["created_at", "2023-09-17 10:05:52.022225"], ["updated_at", "2023-09-17 10:05:52.022225"]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Klein Group"], ["created_at", "2023-09-17 10:05:52.023836"], ["updated_at", "2023-09-17 10:05:52.023836"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Walker-Schiller"], ["created_at", "2023-09-17 10:05:52.025195"], ["updated_at", "2023-09-17 10:05:52.025195"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hettinger Group"], ["created_at", "2023-09-17 10:05:52.026653"], ["updated_at", "2023-09-17 10:05:52.026653"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Toy-Wunsch"], ["created_at", "2023-09-17 10:05:52.027955"], ["updated_at", "2023-09-17 10:05:52.027955"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Vandervort LLC"], ["created_at", "2023-09-17 10:05:52.029348"], ["updated_at", "2023-09-17 10:05:52.029348"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.3ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kuhlman-Hoppe"], ["created_at", "2023-09-17 10:05:52.030637"], ["updated_at", "2023-09-17 10:05:52.030637"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Wilkinson Inc"], ["created_at", "2023-09-17 10:05:52.031981"], ["updated_at", "2023-09-17 10:05:52.031981"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Nader, Powlowski and Purdy"], ["created_at", "2023-09-17 10:05:52.033321"], ["updated_at", "2023-09-17 10:05:52.033321"]]
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT "brands".* FROM "brands" ORDER BY "brands"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Zemlak-Mohr"], ["created_at", "2023-09-17 10:05:52.034681"], ["updated_at", "2023-09-17 10:05:52.034681"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "brands"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Strosin-Tremblay"], ["created_at", "2023-09-17 10:05:52.036001"], ["updated_at", "2023-09-17 10:05:52.036001"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Nikolaus, Rowe and Schinner"], ["created_at", "2023-09-17 10:05:52.037230"], ["updated_at", "2023-09-17 10:05:52.037230"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Swaniawski, Satterfield and Hyatt"], ["created_at", "2023-09-17 10:05:52.038553"], ["updated_at", "2023-09-17 10:05:52.038553"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ortiz-Jaskolski"], ["created_at", "2023-09-17 10:05:52.039818"], ["updated_at", "2023-09-17 10:05:52.039818"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "O'Keefe, Lehner and Reichert"], ["created_at", "2023-09-17 10:05:52.041092"], ["updated_at", "2023-09-17 10:05:52.041092"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Parker and Sons"], ["created_at", "2023-09-17 10:05:52.042954"], ["updated_at", "2023-09-17 10:05:52.042954"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Wilderman LLC"], ["created_at", "2023-09-17 10:05:52.044041"], ["updated_at", "2023-09-17 10:05:52.044041"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.3ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Boyer and Sons"], ["created_at", "2023-09-17 10:05:52.045157"], ["updated_at", "2023-09-17 10:05:52.045157"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Blanda-Windler"], ["created_at", "2023-09-17 10:05:52.046344"], ["updated_at", "2023-09-17 10:05:52.046344"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mayert LLC"], ["created_at", "2023-09-17 10:05:52.047350"], ["updated_at", "2023-09-17 10:05:52.047350"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ruecker, Powlowski and Stehr"], ["created_at", "2023-09-17 10:05:52.048328"], ["updated_at", "2023-09-17 10:05:52.048328"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Boyer-Cruickshank"], ["created_at", "2023-09-17 10:05:52.049424"], ["updated_at", "2023-09-17 10:05:52.049424"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Paucek and Sons"], ["created_at", "2023-09-17 10:05:52.050557"], ["updated_at", "2023-09-17 10:05:52.050557"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bayer, Kautzer and Kulas"], ["created_at", "2023-09-17 10:05:52.051557"], ["updated_at", "2023-09-17 10:05:52.051557"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Rau, Okuneva and Price"], ["created_at", "2023-09-17 10:05:52.052640"], ["updated_at", "2023-09-17 10:05:52.052640"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Yundt, Grant and Stamm"], ["created_at", "2023-09-17 10:05:52.053698"], ["updated_at", "2023-09-17 10:05:52.053698"]]
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb (Duration: 31.0ms | Allocations: 73025)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 1.1ms | Allocations: 74862)
+
+
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Rau, Stark and Mohr"], ["created_at", "2023-09-17 10:05:52.054736"], ["updated_at", "2023-09-17 10:05:52.054736"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bosco and Sons"], ["created_at", "2023-09-17 10:05:52.055741"], ["updated_at", "2023-09-17 10:05:52.055741"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Goldner, Will and Kris"], ["created_at", "2023-09-17 10:05:52.056729"], ["updated_at", "2023-09-17 10:05:52.056729"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Walter, Emmerich and Mills"], ["created_at", "2023-09-17 10:05:52.057729"], ["updated_at", "2023-09-17 10:05:52.057729"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mante-Gislason"], ["created_at", "2023-09-17 10:05:52.058650"], ["updated_at", "2023-09-17 10:05:52.058650"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Nikolaus LLC"], ["created_at", "2023-09-17 10:05:52.059606"], ["updated_at", "2023-09-17 10:05:52.059606"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Huel, O'Conner and Jacobson"], ["created_at", "2023-09-17 10:05:52.060632"], ["updated_at", "2023-09-17 10:05:52.060632"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Harber, Shanahan and Corkery"], ["created_at", "2023-09-17 10:05:52.063085"], ["updated_at", "2023-09-17 10:05:52.063085"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Moore, Block and Pollich"], ["created_at", "2023-09-17 10:05:52.064120"], ["updated_at", "2023-09-17 10:05:52.064120"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hackett-Pfeffer"], ["created_at", "2023-09-17 10:05:52.065103"], ["updated_at", "2023-09-17 10:05:52.065103"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Gottlieb, Will and Prosacco"], ["created_at", "2023-09-17 10:05:52.066039"], ["updated_at", "2023-09-17 10:05:52.066039"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cassin-Mayer"], ["created_at", "2023-09-17 10:05:52.067556"], ["updated_at", "2023-09-17 10:05:52.067556"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lowe, Cassin and Kulas"], ["created_at", "2023-09-17 10:05:52.069140"], ["updated_at", "2023-09-17 10:05:52.069140"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kerluke-King"], ["created_at", "2023-09-17 10:05:52.070215"], ["updated_at", "2023-09-17 10:05:52.070215"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Stiedemann, Tillman and Skiles"], ["created_at", "2023-09-17 10:05:52.071315"], ["updated_at", "2023-09-17 10:05:52.071315"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bernier Group"], ["created_at", "2023-09-17 10:05:52.072591"], ["updated_at", "2023-09-17 10:05:52.072591"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kuhic LLC"], ["created_at", "2023-09-17 10:05:52.074133"], ["updated_at", "2023-09-17 10:05:52.074133"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.3ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Schinner, Schultz and Marquardt"], ["created_at", "2023-09-17 10:05:52.075776"], ["updated_at", "2023-09-17 10:05:52.075776"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Huels Inc"], ["created_at", "2023-09-17 10:05:52.090889"], ["updated_at", "2023-09-17 10:05:52.090889"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "O'Connell-Ritchie"], ["created_at", "2023-09-17 10:05:52.092139"], ["updated_at", "2023-09-17 10:05:52.092139"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Rath, Kautzer and Nicolas"], ["created_at", "2023-09-17 10:05:52.093204"], ["updated_at", "2023-09-17 10:05:52.093204"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Towne Group"], ["created_at", "2023-09-17 10:05:52.094349"], ["updated_at", "2023-09-17 10:05:52.094349"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Yundt, Barrows and McGlynn"], ["created_at", "2023-09-17 10:05:52.095580"], ["updated_at", "2023-09-17 10:05:52.095580"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hermiston Inc"], ["created_at", "2023-09-17 10:05:52.096969"], ["updated_at", "2023-09-17 10:05:52.096969"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Windler-Gottlieb"], ["created_at", "2023-09-17 10:05:52.098050"], ["updated_at", "2023-09-17 10:05:52.098050"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mosciski-Barrows"], ["created_at", "2023-09-17 10:05:52.099157"], ["updated_at", "2023-09-17 10:05:52.099157"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bayer Group"], ["created_at", "2023-09-17 10:05:52.100222"], ["updated_at", "2023-09-17 10:05:52.100222"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Douglas, Grant and Wiegand"], ["created_at", "2023-09-17 10:05:52.101263"], ["updated_at", "2023-09-17 10:05:52.101263"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Gerlach LLC"], ["created_at", "2023-09-17 10:05:52.102394"], ["updated_at", "2023-09-17 10:05:52.102394"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Klocko and Sons"], ["created_at", "2023-09-17 10:05:52.103324"], ["updated_at", "2023-09-17 10:05:52.103324"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lindgren and Sons"], ["created_at", "2023-09-17 10:05:52.104186"], ["updated_at", "2023-09-17 10:05:52.104186"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Runolfsdottir, Tromp and Quitzon"], ["created_at", "2023-09-17 10:05:52.105046"], ["updated_at", "2023-09-17 10:05:52.105046"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ward-Zboncak"], ["created_at", "2023-09-17 10:05:52.105923"], ["updated_at", "2023-09-17 10:05:52.105923"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Schultz-Bogan"], ["created_at", "2023-09-17 10:05:52.106809"], ["updated_at", "2023-09-17 10:05:52.106809"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Larkin-Abernathy"], ["created_at", "2023-09-17 10:05:52.107702"], ["updated_at", "2023-09-17 10:05:52.107702"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cartwright LLC"], ["created_at", "2023-09-17 10:05:52.108582"], ["updated_at", "2023-09-17 10:05:52.108582"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (12.3ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hoeger, Dietrich and Yundt"], ["created_at", "2023-09-17 10:05:52.109473"], ["updated_at", "2023-09-17 10:05:52.109473"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.5ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Jones, Wintheiser and Windler"], ["created_at", "2023-09-17 10:05:52.122852"], ["updated_at", "2023-09-17 10:05:52.122852"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Walsh Group"], ["created_at", "2023-09-17 10:05:52.124249"], ["updated_at", "2023-09-17 10:05:52.124249"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lowe-Rogahn"], ["created_at", "2023-09-17 10:05:52.125303"], ["updated_at", "2023-09-17 10:05:52.125303"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cruickshank and Sons"], ["created_at", "2023-09-17 10:05:52.126276"], ["updated_at", "2023-09-17 10:05:52.126276"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Moore Group"], ["created_at", "2023-09-17 10:05:52.127288"], ["updated_at", "2023-09-17 10:05:52.127288"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "VonRueden, Rohan and Bins"], ["created_at", "2023-09-17 10:05:52.128294"], ["updated_at", "2023-09-17 10:05:52.128294"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Witting-Greenholt"], ["created_at", "2023-09-17 10:05:52.129441"], ["updated_at", "2023-09-17 10:05:52.129441"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Carroll LLC"], ["created_at", "2023-09-17 10:05:52.130451"], ["updated_at", "2023-09-17 10:05:52.130451"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Doyle, Lebsack and Koelpin"], ["created_at", "2023-09-17 10:05:52.131599"], ["updated_at", "2023-09-17 10:05:52.131599"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Stark-Leffler"], ["created_at", "2023-09-17 10:05:52.132718"], ["updated_at", "2023-09-17 10:05:52.132718"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Barrows, Bruen and Lebsack"], ["created_at", "2023-09-17 10:05:52.133746"], ["updated_at", "2023-09-17 10:05:52.133746"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Predovic, Brekke and Auer"], ["created_at", "2023-09-17 10:05:52.134835"], ["updated_at", "2023-09-17 10:05:52.134835"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Schumm Inc"], ["created_at", "2023-09-17 10:05:52.135743"], ["updated_at", "2023-09-17 10:05:52.135743"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "West Group"], ["created_at", "2023-09-17 10:05:52.136607"], ["updated_at", "2023-09-17 10:05:52.136607"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hegmann-Mertz"], ["created_at", "2023-09-17 10:05:52.137660"], ["updated_at", "2023-09-17 10:05:52.137660"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Deckow-Breitenberg"], ["created_at", "2023-09-17 10:05:52.138707"], ["updated_at", "2023-09-17 10:05:52.138707"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "O'Connell Group"], ["created_at", "2023-09-17 10:05:52.139721"], ["updated_at", "2023-09-17 10:05:52.139721"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Nolan Inc"], ["created_at", "2023-09-17 10:05:52.140728"], ["updated_at", "2023-09-17 10:05:52.140728"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Wisozk-Luettgen"], ["created_at", "2023-09-17 10:05:52.141761"], ["updated_at", "2023-09-17 10:05:52.141761"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cronin, Koelpin and Greenfelder"], ["created_at", "2023-09-17 10:05:52.142820"], ["updated_at", "2023-09-17 10:05:52.142820"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Larkin-Nader"], ["created_at", "2023-09-17 10:05:52.143849"], ["updated_at", "2023-09-17 10:05:52.143849"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sauer Group"], ["created_at", "2023-09-17 10:05:52.144859"], ["updated_at", "2023-09-17 10:05:52.144859"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Boyle, VonRueden and Wintheiser"], ["created_at", "2023-09-17 10:05:52.146067"], ["updated_at", "2023-09-17 10:05:52.146067"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "D'Amore and Sons"], ["created_at", "2023-09-17 10:05:52.147070"], ["updated_at", "2023-09-17 10:05:52.147070"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mohr-Pouros"], ["created_at", "2023-09-17 10:05:52.148029"], ["updated_at", "2023-09-17 10:05:52.148029"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ruecker, Renner and Cormier"], ["created_at", "2023-09-17 10:05:52.149213"], ["updated_at", "2023-09-17 10:05:52.149213"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Carroll Inc"], ["created_at", "2023-09-17 10:05:52.150314"], ["updated_at", "2023-09-17 10:05:52.150314"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Abbott Inc"], ["created_at", "2023-09-17 10:05:52.151330"], ["updated_at", "2023-09-17 10:05:52.151330"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Feeney-Kautzer"], ["created_at", "2023-09-17 10:05:52.152369"], ["updated_at", "2023-09-17 10:05:52.152369"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Flatley-Heidenreich"], ["created_at", "2023-09-17 10:05:52.153294"], ["updated_at", "2023-09-17 10:05:52.153294"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Grant, Fay and Lynch"], ["created_at", "2023-09-17 10:05:52.154335"], ["updated_at", "2023-09-17 10:05:52.154335"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pagac-Maggio"], ["created_at", "2023-09-17 10:05:52.155355"], ["updated_at", "2023-09-17 10:05:52.155355"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Morissette Inc"], ["created_at", "2023-09-17 10:05:52.156389"], ["updated_at", "2023-09-17 10:05:52.156389"]]
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/csv_import_worker.rb:13:in `block in perform'
+Started GET "/admin/brands" for ::1 at 2023-09-17 15:05:53 +0500
+Processing by Admin::BrandsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT "brands".* FROM "brands" ORDER BY "brands"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBrand Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "brands"[0m
+  Rendered /Users/marryamshahzad/.rvm/gems/ruby-3.0.0/gems/activeadmin-3.0.0/app/views/active_admin/resource/index.html.arb (Duration: 28.4ms | Allocations: 72808)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.9ms | Allocations: 74646)
+
+
