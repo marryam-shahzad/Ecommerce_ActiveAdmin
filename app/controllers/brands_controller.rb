@@ -47,13 +47,13 @@ class BrandsController < ApplicationController
     redirect_to brands_url, notice: 'Brand was successfully destroyed.'
   end
 
- def import_csv
-    # Process the uploaded CSV file
-    file_path = params[:csv_file].tempfile.path
-    CsvImportWorker.perform_async(file_path)
-    # redirect_to @brand, notice: 'Brand was successfully updated.'
-    # Optionally, you can redirect to a page or render a message here
-  end
+ # def import_csv
+ #    # Process the uploaded CSV file
+ #    file_path = params[:csv_file].tempfile.path
+ #    CsvImportWorker.perform_async(file_path)
+ #    # redirect_to @brand, notice: 'Brand was successfully updated.'
+ #    # Optionally, you can redirect to a page or render a message here
+ #  end
   private
 
   def set_brand

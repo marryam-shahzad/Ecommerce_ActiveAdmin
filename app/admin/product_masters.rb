@@ -25,6 +25,9 @@ ActiveAdmin.register ProductMaster do
     end
     f.actions
   end
+  #   action_item :import_csv, only: :index do
+  #   link_to 'Import CSV', admin_csv_import_path
+  # end
 
   # action_item :import_csv, only: :index do
   #   link_to 'Import CSV', admin_product_master_csv_import_path
