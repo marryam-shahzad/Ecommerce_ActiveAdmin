@@ -51,34 +51,67 @@
 
 
 # app/admin/csv_import.rb
-require 'csv_importer' # Include the module
+# require 'csv_importer' # Include the module
+
+# ActiveAdmin.register_page 'CSV Import' do
+#   # include Admin::CsvImportable # Include the module here
+#   content do
+#     render 'admin/csv_import/form'
+#   end
+
+#   page_action :import, method: :post do
+#     # Enqueue CSV import job for Category model
+#     if params[:csv_file].present? && params[:csv_file].respond_to?(:tempfile) && params[:model_name].present?
+#       file_path = params[:csv_file].tempfile.path
+#       model_name = params[:model_name]
+
+#       if CsvImporter.valid_model_name?(model_name)
+#         CsvImportWorker.perform_async(file_path, model_name)
+#         # redirect_to admin_categories_path, notice: 'CSV file was successfully queued for import.'
+#          redirect_path = send("admin_#{model_name.underscore.pluralize}_path")
+
+#       redirect_to redirect_path, notice: 'CSV file was successfully queued for import.'
+#       else
+#         redirect_to admin_csv_import_path, alert: 'Invalid model selected.'
+#       end
+#     else
+#       redirect_to admin_csv_import_path, alert: 'Please select a CSV file and specify a model to import.'
+#     end
+#   end
+# end
+
+
+
+
+
+
+# app/admin/csv_import.rb
+
+require 'csv_importer'
 
 ActiveAdmin.register_page 'CSV Import' do
-  # include Admin::CsvImportable # Include the module here
   content do
     render 'admin/csv_import/form'
   end
 
   page_action :import, method: :post do
-    # Enqueue CSV import job for Category model
     if params[:csv_file].present? && params[:csv_file].respond_to?(:tempfile) && params[:model_name].present?
       file_path = params[:csv_file].tempfile.path
       model_name = params[:model_name]
 
-      if CsvImporter.valid_model_name?(model_name)
-        CsvImportWorker.perform_async(file_path, model_name)
-        # redirect_to admin_categories_path, notice: 'CSV file was successfully queued for import.'
-         redirect_path = send("admin_#{model_name.underscore.pluralize}_path")
+      # Extract the file name from the uploaded CSV file
+      uploaded_file_name = File.basename(params[:csv_file].original_filename, '.csv')
 
-      redirect_to redirect_path, notice: 'CSV file was successfully queued for import.'
+      if model_name.singularize.downcase == uploaded_file_name.singularize.downcase
+        CsvImportWorker.perform_async(file_path, model_name)
+        redirect_path = send("admin_#{model_name.underscore.pluralize}_path")
+        redirect_to redirect_path, notice: 'CSV file was successfully queued for import.'
       else
-        redirect_to admin_csv_import_path, alert: 'Invalid model selected.'
+        redirect_to admin_csv_import_path, alert: 'File name and selected model do not match.'
       end
     else
       redirect_to admin_csv_import_path, alert: 'Please select a CSV file and specify a model to import.'
     end
   end
 end
-
-
 
